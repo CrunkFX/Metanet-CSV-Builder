@@ -134,19 +134,19 @@
                             <Rectangle Margin="0,0,0,10" />
                             <Button x:Name="gi23load" Content="CSV Laden" Click="gi23load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi24load" Content="CSV Laden"/>
+                            <Button x:Name="gi24load" Content="CSV Laden" Click="gi24load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi25load" Content="CSV Laden"/>
+                            <Button x:Name="gi25load" Content="CSV Laden" Click="gi25load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi26load" Content="CSV Laden"/>
+                            <Button x:Name="gi26load" Content="CSV Laden" Click="gi26load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi27load" Content="CSV Laden"/>
+                            <Button x:Name="gi27load" Content="CSV Laden" Click="gi27load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi28load" Content="CSV Laden"/>
+                            <Button x:Name="gi28load" Content="CSV Laden" Click="gi28load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi29load" Content="CSV Laden"/>
+                            <Button x:Name="gi29load" Content="CSV Laden" Click="gi29load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
-                            <Button x:Name="gi30load" Content="CSV Laden"/>
+                            <Button x:Name="gi30load" Content="CSV Laden" Click="gi30load_Click"/>
                             <Rectangle Margin="0,0,0,10" />
 
 
