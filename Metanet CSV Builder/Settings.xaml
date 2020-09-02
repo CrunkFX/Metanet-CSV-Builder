@@ -1,0 +1,14 @@
+﻿<Window x:Class="Metanet_CSV_Builder.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metanet_CSV_Builder"
+        mc:Ignorable="d"
+        Title="Einstellungen" Height="464.34" Width="303.566">
+    <Grid>
+        <Label Content="Netzwerk zum Editieren auswählen" HorizontalAlignment="Center" Margin="43,10,45.8,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button Content="❮" HorizontalAlignment="Left" Margin="7,13,0,0" VerticalAlignment="Top" Width="31" Height="32" FontSize="14" FontWeight="Normal"/>
+
+    </Grid>
+</Window>

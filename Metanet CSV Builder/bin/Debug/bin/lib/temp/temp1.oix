@@ -1,0 +1,114 @@
+Komponente,Zusatztext,Bezeichnung,Bezeichner
+Zentrale 3;F6 -- SA.3.F6;Z/3;
+Primärleitung 321;;P/321;
+Primärleitung 331;F6 OG;P/331;
+Primärleitung 332;F6 EG;P/332;
+Primärleitung 333;F6 KG + F7;P/333;
+Steuergruppen 510;F6 KG Signalgeber;S/510;
+Steuergruppen 516;F6 Aufzugsstrg.;S/516;
+Steuergruppen 530;F6 EG Signalgeber;S/530;
+Steuergruppen 536;F6 EG Blitzl.;S/536;
+Steuergruppen 537;F6 RWA KFZ Schleuse;S/537;
+Steuergruppen 540;F6 RWA TH;S/540;
+Steuergruppen 541;F6 BOS Funk;S/541;
+Steuergruppen 550;F6 OG Signalgeber;S/550;
+Meldergruppe 7200;;G/7200;HS72.7200
+Meldergruppe 7201;;G/7201;HS72.7201
+Meldergruppe 7202;;G/7202;HS72.7202
+Meldergruppe 7203;;G/7203;HS72.7203
+Meldergruppe 7204;;G/7204;HS72.7204
+Meldergruppe 7205;;G/7205;HS72.7205
+Meldergruppe 7206;;G/7206;HS72.7206
+Meldergruppe 7207;;G/7207;HS72.7207
+Meldergruppe 7208;;G/7208;HS72.7208
+Meldergruppe 7209;;G/7209;HS72.7209
+Meldergruppe 7210;;G/7210;HS72.7210
+Meldergruppe 7211;;G/7211;HS72.7211
+Meldergruppe 7212;;G/7212;HS72.7212
+Meldergruppe 7213;;G/7213;HS72.7213
+Meldergruppe 7214;;G/7214;HS72.7214
+Meldergruppe 7215;;G/7215;HS72.7215
+Meldergruppe 7216;;G/7216;HS72.7216
+Meldergruppe 7217;;G/7217;HS72.7217
+Meldergruppe 7218;;G/7218;HS72.7218
+Meldergruppe 7219;;G/7219;HS72.7219
+Meldergruppe 7220;;G/7220;HS72.7220
+Meldergruppe 7221;;G/7221;HS72.7221
+Meldergruppe 7222;;G/7222;HS72.7222
+Meldergruppe 7223;;G/7223;HS72.7223
+Meldergruppe 7224;;G/7224;HS72.7224
+Meldergruppe 7225;;G/7225;HS72.7225
+Meldergruppe 7226;;G/7226;HS72.7226
+Meldergruppe 7227;;G/7227;HS72.7227
+Meldergruppe 7228;;G/7228;HS72.7228
+Meldergruppe 7229;;G/7229;HS72.7229
+Meldergruppe 7230;;G/7230;HS72.7230
+Meldergruppe 7231;;G/7231;HS72.7231
+Meldergruppe 7232;;G/7232;HS72.7232
+Meldergruppe 7233;;G/7233;HS72.7233
+Meldergruppe 7234;;G/7234;HS72.7234
+Meldergruppe 7235;;G/7235;HS72.7235
+Meldergruppe 7236;;G/7236;HS72.7236
+Meldergruppe 7237;;G/7237;HS72.7237
+Meldergruppe 7238;;G/7238;HS72.7238
+Meldergruppe 7239;;G/7239;HS72.7239
+Meldergruppe 7240;;G/7240;HS72.7240
+Meldergruppe 7241;;G/7241;HS72.7241
+Meldergruppe 7242;;G/7242;HS72.7242
+Meldergruppe 7243;;G/7243;HS72.7243
+Meldergruppe 7244;;G/7244;HS72.7244
+Meldergruppe 7245;;G/7245;HS72.7245
+Meldergruppe 7246;;G/7246;HS72.7246
+Meldergruppe 7247;;G/7247;HS72.7247
+Meldergruppe 7248;;G/7248;HS72.7248
+Meldergruppe 7249;;G/7249;HS72.7249
+Meldergruppe 7250;;G/7250;HS72.7250
+Meldergruppe 7251;;G/7251;HS72.7251
+Meldergruppe 7252;;G/7252;HS72.7252
+Meldergruppe 7253;;G/7253;HS72.7253
+Meldergruppe 7254;;G/7254;HS72.7254
+Meldergruppe 7255;;G/7255;HS72.7255
+Meldergruppe 7256;;G/7256;HS72.7256
+Meldergruppe 7257;;G/7257;HS72.7257
+Meldergruppe 7258;;G/7258;HS72.7258
+Meldergruppe 7259;;G/7259;HS72.7259
+Meldergruppe 7260;;G/7260;HS72.7260
+Meldergruppe 7261;;G/7261;HS72.7261
+Meldergruppe 7262;;G/7262;HS72.7262
+Meldergruppe 7263;;G/7263;HS72.7263
+Meldergruppe 7264;;G/7264;HS72.7264
+Meldergruppe 7265;;G/7265;HS72.7265
+Meldergruppe 7266;;G/7266;HS72.7266
+Meldergruppe 7267;;G/7267;HS72.7267
+Meldergruppe 7268;;G/7268;HS72.7268
+Meldergruppe 7269;;G/7269;HS72.7269
+Meldergruppe 7270;;G/7270;HS72.7270
+Meldergruppe 7271;;G/7271;HS72.7271
+Meldergruppe 7272;;G/7272;HS72.7272
+Meldergruppe 7273;;G/7273;HS72.7273
+Meldergruppe 7274;;G/7274;HS72.7274
+Meldergruppe 7275;;G/7275;HS72.7275
+Meldergruppe 7276;;G/7276;HS72.7276
+Meldergruppe 7277;;G/7277;HS72.7277
+Meldergruppe 7278;;G/7278;HS72.7278
+Meldergruppe 7279;;G/7279;HS72.7279
+Meldergruppe 7280;;G/7280;HS72.7280
+Meldergruppe 7281;;G/7281;HS72.7281
+Meldergruppe 7282;;G/7282;HS72.7282
+Meldergruppe 7283;;G/7283;HS72.7283
+Meldergruppe 7284;;G/7284;HS72.7284
+Meldergruppe 7285;;G/7285;HS72.7285
+Meldergruppe 7286;;G/7286;HS72.7286
+Meldergruppe 7287;;G/7287;HS72.7287
+Meldergruppe 7288;;G/7288;HS72.7288
+Meldergruppe 7289;;G/7289;HS72.7289
+Meldergruppe 7290;;G/7290;HS72.7290
+Meldergruppe 7291;;G/7291;HS72.7291
+Meldergruppe 7292;;G/7292;HS72.7292
+Meldergruppe 7293;;G/7293;HS72.7293
+Meldergruppe 7294;;G/7294;HS72.7294
+Meldergruppe 7295;;G/7295;HS72.7295
+Meldergruppe 7296;;G/7296;HS72.7296
+Meldergruppe 7297;;G/7297;HS72.7297
+Meldergruppe 7298;;G/7298;HS72.7298
+Meldergruppe 7299;;G/7299;HS72.7299
