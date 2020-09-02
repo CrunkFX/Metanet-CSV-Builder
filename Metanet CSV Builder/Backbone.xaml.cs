@@ -1014,112 +1014,176 @@ namespace Metanet_CSV_Builder
 
         private void gi2load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 2.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 2.csv").ToString();
         }
 
         private void gi3load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 3.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 3.csv").ToString();
         }
 
         private void gi4load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 4.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 4.csv").ToString();
         }
 
         private void gi5load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 5.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 5.csv").ToString();
         }
 
         private void gi6load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 6.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 6.csv").ToString();
         }
 
         private void gi7load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 7.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 7.csv").ToString();
         }
 
         private void gi8load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 8.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 8.csv").ToString();
         }
 
         private void gi9load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 9.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 9.csv").ToString();
         }
 
         private void gi10load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 10.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 10.csv").ToString();
         }
 
         private void gi11load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 11.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 11.csv").ToString();
         }
 
         private void gi12load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 12.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 12.csv").ToString();
         }
 
         private void gi13load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 13.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 13.csv").ToString();
         }
 
         private void gi14load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 14.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 14.csv").ToString();
         }
 
         private void gi15load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 15.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 15.csv").ToString();
         }
 
         private void gi16load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 16.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 16.csv").ToString();
         }
 
         private void gi17load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 17.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 17.csv").ToString();
         }
 
         private void gi18load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 18.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 18.csv").ToString();
         }
 
         private void gi19load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 19.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 19.csv").ToString();
         }
 
         private void gi20load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 20.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 20.csv").ToString();
         }
 
         private void gi21load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 21.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 21.csv").ToString();
         }
 
         private void gi22load_Click(object sender, RoutedEventArgs e)
         {
-
+            CSVImport("Zentrale 22.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 22.csv").ToString();
         }
 
         private void gi23load_Click(object sender, RoutedEventArgs e)
         {
+            CSVImport("Zentrale 23.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 23.csv").ToString();
+        }
 
+        private void gi24load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 24.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 24.csv").ToString();
+        }
+
+        private void gi25load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 25.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 25.csv").ToString();
+        }
+
+        private void gi26load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 26.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 26.csv").ToString();
+        }
+
+        private void gi27load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 27.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 27.csv").ToString();
+        }
+
+        private void gi28load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 28.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 28.csv").ToString();
+        }
+
+        private void gi29load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 29.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 29.csv").ToString();
+        }
+
+        private void gi30load_Click(object sender, RoutedEventArgs e)
+        {
+            CSVImport("Zentrale 30.csv");
+            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 30.csv").ToString();
         }
     }
 }
