@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Metanet_CSV_Builder"
         mc:Ignorable="d"
-        Title="Backbone" Height="1205.71" Width="1006.933">
+        Title="Backbone" Height="495.31" Width="1006.933">
     <TabControl Margin="0,0,0,0">
         <TabItem Header="Konfigurieren">
             <Grid>

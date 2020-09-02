@@ -44,9 +44,28 @@ namespace Metanet_CSV_Builder
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            Start win = new Start();
-            win.Show();
-            base.OnClosing(e);
+            if (MessageBox.Show("Möchten Sie die Änderungen speichern?",
+   "Änderungen speichern?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                ok.Visibility = Visibility.Visible;
+                string line = string.Empty;
+
+                string tempdb = System.IO.Path.GetTempFileName();
+                string[] lines = { gi1bz.Text, gi2bz.Text, gi3bz.Text, gi4bz.Text, gi5bz.Text, gi6bz.Text, gi7bz.Text, gi8bz.Text, gi9bz.Text, gi10bz.Text, gi11bz.Text, gi12bz.Text, gi13bz.Text, gi14bz.Text, gi15bz.Text, gi16bz.Text, gi17bz.Text, gi18bz.Text, gi19bz.Text, gi20bz.Text, gi21bz.Text, gi22bz.Text, gi23bz.Text, gi24bz.Text, gi25bz.Text, gi26bz.Text, gi27bz.Text, gi28bz.Text, gi29bz.Text, gi30bz.Text, gi1s.Value.ToString(), gi2s.Value.ToString(), gi3s.Value.ToString(), gi4s.Value.ToString(), gi5s.Value.ToString(), gi6s.Value.ToString(), gi7s.Value.ToString(), gi8s.Value.ToString(), gi9s.Value.ToString(), gi10s.Value.ToString(), gi11s.Value.ToString(), gi12s.Value.ToString(), gi13s.Value.ToString(), gi14s.Value.ToString(), gi15s.Value.ToString(), gi16s.Value.ToString(), gi17s.Value.ToString(), gi18s.Value.ToString(), gi19s.Value.ToString(), gi20s.Value.ToString(), gi21s.Value.ToString(), gi22s.Value.ToString(), gi23s.Value.ToString(), gi24s.Value.ToString(), gi25s.Value.ToString(), gi26s.Value.ToString(), gi27s.Value.ToString(), gi28s.Value.ToString(), gi29s.Value.ToString(), gi30s.Value.ToString(), gi1e.Value.ToString(), gi2e.Value.ToString(), gi3e.Value.ToString(), gi4e.Value.ToString(), gi5e.Value.ToString(), gi6e.Value.ToString(), gi7e.Value.ToString(), gi8e.Value.ToString(), gi9e.Value.ToString(), gi10e.Value.ToString(), gi11e.Value.ToString(), gi12e.Value.ToString(), gi13e.Value.ToString(), gi14e.Value.ToString(), gi15e.Value.ToString(), gi16e.Value.ToString(), gi17e.Value.ToString(), gi18e.Value.ToString(), gi19e.Value.ToString(), gi20e.Value.ToString(), gi21e.Value.ToString(), gi22e.Value.ToString(), gi23e.Value.ToString(), gi24e.Value.ToString(), gi25e.Value.ToString(), gi26e.Value.ToString(), gi27e.Value.ToString(), gi28e.Value.ToString(), gi29e.Value.ToString(), gi30e.Value.ToString(), sgi1s.Value.ToString(), sgi2s.Value.ToString(), sgi3s.Value.ToString(), sgi4s.Value.ToString(), sgi5s.Value.ToString(), sgi6s.Value.ToString(), sgi7s.Value.ToString(), sgi8s.Value.ToString(), sgi9s.Value.ToString(), sgi10s.Value.ToString(), sgi11s.Value.ToString(), sgi12s.Value.ToString(), sgi13s.Value.ToString(), sgi14s.Value.ToString(), sgi15s.Value.ToString(), sgi16s.Value.ToString(), sgi17s.Value.ToString(), sgi18s.Value.ToString(), sgi19s.Value.ToString(), sgi20s.Value.ToString(), sgi21s.Value.ToString(), sgi22s.Value.ToString(), sgi23s.Value.ToString(), sgi24s.Value.ToString(), sgi25s.Value.ToString(), sgi26s.Value.ToString(), sgi27s.Value.ToString(), sgi28s.Value.ToString(), sgi29s.Value.ToString(), sgi30s.Value.ToString(), sgi1e.Value.ToString(), sgi2e.Value.ToString(), sgi3e.Value.ToString(), sgi4e.Value.ToString(), sgi5e.Value.ToString(), sgi6e.Value.ToString(), sgi7e.Value.ToString(), sgi8e.Value.ToString(), sgi9e.Value.ToString(), sgi10e.Value.ToString(), sgi11e.Value.ToString(), sgi12e.Value.ToString(), sgi13e.Value.ToString(), sgi14e.Value.ToString(), sgi15e.Value.ToString(), sgi16e.Value.ToString(), sgi17e.Value.ToString(), sgi18e.Value.ToString(), sgi19e.Value.ToString(), sgi20e.Value.ToString(), sgi21e.Value.ToString(), sgi22e.Value.ToString(), sgi23e.Value.ToString(), sgi24e.Value.ToString(), sgi25e.Value.ToString(), sgi26e.Value.ToString(), sgi27e.Value.ToString(), sgi28e.Value.ToString(), sgi29e.Value.ToString(), sgi30e.Value.ToString() };
+                File.Delete(DB);
+                System.IO.File.AppendAllLines(DB, lines);
+                Doit();
+                Start win = new Start();
+                win.Show();
+                base.OnClosing(e);
+            }
+            else
+            {
+                Start win = new Start();
+                win.Show();
+                base.OnClosing(e);
+            }
+            
         }
 
 
@@ -212,7 +231,11 @@ namespace Metanet_CSV_Builder
             {
                 MessageBox.Show("Probiers nochmal!");
             }
-
+            for (int i = 1; i < 31; i++)
+            {
+                (FindName("gi" + i + "lc") as Label).Content = File.GetLastWriteTime(CSVPath + "Zentrale " + i + ".csv").ToString();
+                (FindName("gi" + i + "lc") as Label).Height = 27;
+            }
         }
 
         
@@ -232,10 +255,11 @@ namespace Metanet_CSV_Builder
             await Task.Delay(2000);
             ok.Visibility = Visibility.Hidden;
         }
-
+        
         //----------------------------------------------Konfiguration speichern
         private void savedb_Click(object sender, RoutedEventArgs e)
         {
+
             ok.Visibility = Visibility.Visible;
             string line = string.Empty;
 
@@ -244,7 +268,6 @@ namespace Metanet_CSV_Builder
             File.Delete(DB);
             System.IO.File.AppendAllLines(DB, lines);
             Doit();
-           
 
 
 
@@ -253,7 +276,7 @@ namespace Metanet_CSV_Builder
 
         //----------------------------------------------Gruppenintervall 1 in die neue Datei schreiben
         string temppath2 = System.IO.Path.GetTempFileName();
-        public void CreateCSV(string csvno, string Zentralenadresse, int Repeat, string GAStart, string GAEnd, string SGAStart, string SGAEnd)
+        public void CreateCSV(string csvno, string Zentralenadresse, int RepeatGA, string GAStart, string GAEnd, string SGAStart, string SGAEnd, int RepeatSGA)
         {
 
             using (StreamReader reader = new StreamReader(CSVPath + "Zentrale " + csvno + ".csv"))
@@ -282,13 +305,7 @@ namespace Metanet_CSV_Builder
 
                             writer.WriteLine(line);
                         };
-                        if (line.Contains("Steuergruppen") == true)
-                        {
-
-
-                            writer.WriteLine(line);
-                        };
-
+                       
 
 
 
@@ -298,10 +315,16 @@ namespace Metanet_CSV_Builder
 
                 }
             }
-            for (int i = 0; i < Repeat; i++)
+            for (int i = 0; i < RepeatGA; i++)
             {
                 int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(temppath2, "Meldergruppe " + SGAStart + c + ";;G/" + SGAStart + c + ";" + Zentralenadresse + "." + SGAStart + c + "\r\n");
+                System.IO.File.AppendAllText(temppath2, "Meldergruppe " + c + ";;G/" + c + ";" + Zentralenadresse + "." +  c + "\r\n");
+
+            }
+            for (int i = 0; i < RepeatSGA; i++)
+            {
+                int c = i + Convert.ToInt32(SGAStart);
+                System.IO.File.AppendAllText(temppath2, "Steuergruppen " + c + ";;S/" + c + ";" + Zentralenadresse + "." + c + "\r\n");
 
             }
 
@@ -310,7 +333,7 @@ namespace Metanet_CSV_Builder
 
         //----------------------------------------------Restliche Gruppenintervalle schreiben
         string temppath3 = System.IO.Path.GetTempFileName();
-        public void CreateCSV2(string csvno, string Zentralenadresse, int Repeat, string GAStart, string GAEnd, string SGAStart, string SGAEnd, int numnn)
+        public void CreateCSV2(string csvno, string Zentralenadresse, int RepeatGA, string GAStart, string GAEnd, string SGAStart, string SGAEnd,int RepeatSGA)
         {
 
             using (StreamReader reader = new StreamReader(CSVPath + "Zentrale " + csvno + ".csv"))
@@ -355,13 +378,19 @@ namespace Metanet_CSV_Builder
 
                 }
             }
-            for (int i = 0; i < Repeat; i++)
+            for (int i = 0; i < RepeatGA; i++)
             {
                 int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(temppath3, "Meldergruppe " + SGAStart + c + ";;G/" + SGAStart + c + ";" + Zentralenadresse + "." + SGAStart + c + "\r\n");
+                System.IO.File.AppendAllText(temppath3, "Meldergruppe " +  c + ";;G/" + c + ";" + Zentralenadresse + "." +  c + "\r\n");
 
             }
-            File.Copy(temppath3, CSVTemp + "temp" + numnn + 1 + ".oix", true);
+            for (int i = 0; i < RepeatSGA; i++)
+            {
+                int c = i + Convert.ToInt32(SGAStart);
+                System.IO.File.AppendAllText(temppath3, "Meldergruppe " +  c + ";;S/" +  c + ";" + Zentralenadresse + "." +  c + "\r\n");
+
+            }
+
 
         }
 
@@ -369,6 +398,15 @@ namespace Metanet_CSV_Builder
         //----------------------------------------------Konfiguration erstellen
         private void createbt_Click(object sender, RoutedEventArgs e)
         {
+            ok.Visibility = Visibility.Visible;
+            string line = string.Empty;
+
+            string tempdb = System.IO.Path.GetTempFileName();
+            string[] lines = { gi1bz.Text, gi2bz.Text, gi3bz.Text, gi4bz.Text, gi5bz.Text, gi6bz.Text, gi7bz.Text, gi8bz.Text, gi9bz.Text, gi10bz.Text, gi11bz.Text, gi12bz.Text, gi13bz.Text, gi14bz.Text, gi15bz.Text, gi16bz.Text, gi17bz.Text, gi18bz.Text, gi19bz.Text, gi20bz.Text, gi21bz.Text, gi22bz.Text, gi23bz.Text, gi24bz.Text, gi25bz.Text, gi26bz.Text, gi27bz.Text, gi28bz.Text, gi29bz.Text, gi30bz.Text, gi1s.Value.ToString(), gi2s.Value.ToString(), gi3s.Value.ToString(), gi4s.Value.ToString(), gi5s.Value.ToString(), gi6s.Value.ToString(), gi7s.Value.ToString(), gi8s.Value.ToString(), gi9s.Value.ToString(), gi10s.Value.ToString(), gi11s.Value.ToString(), gi12s.Value.ToString(), gi13s.Value.ToString(), gi14s.Value.ToString(), gi15s.Value.ToString(), gi16s.Value.ToString(), gi17s.Value.ToString(), gi18s.Value.ToString(), gi19s.Value.ToString(), gi20s.Value.ToString(), gi21s.Value.ToString(), gi22s.Value.ToString(), gi23s.Value.ToString(), gi24s.Value.ToString(), gi25s.Value.ToString(), gi26s.Value.ToString(), gi27s.Value.ToString(), gi28s.Value.ToString(), gi29s.Value.ToString(), gi30s.Value.ToString(), gi1e.Value.ToString(), gi2e.Value.ToString(), gi3e.Value.ToString(), gi4e.Value.ToString(), gi5e.Value.ToString(), gi6e.Value.ToString(), gi7e.Value.ToString(), gi8e.Value.ToString(), gi9e.Value.ToString(), gi10e.Value.ToString(), gi11e.Value.ToString(), gi12e.Value.ToString(), gi13e.Value.ToString(), gi14e.Value.ToString(), gi15e.Value.ToString(), gi16e.Value.ToString(), gi17e.Value.ToString(), gi18e.Value.ToString(), gi19e.Value.ToString(), gi20e.Value.ToString(), gi21e.Value.ToString(), gi22e.Value.ToString(), gi23e.Value.ToString(), gi24e.Value.ToString(), gi25e.Value.ToString(), gi26e.Value.ToString(), gi27e.Value.ToString(), gi28e.Value.ToString(), gi29e.Value.ToString(), gi30e.Value.ToString(), sgi1s.Value.ToString(), sgi2s.Value.ToString(), sgi3s.Value.ToString(), sgi4s.Value.ToString(), sgi5s.Value.ToString(), sgi6s.Value.ToString(), sgi7s.Value.ToString(), sgi8s.Value.ToString(), sgi9s.Value.ToString(), sgi10s.Value.ToString(), sgi11s.Value.ToString(), sgi12s.Value.ToString(), sgi13s.Value.ToString(), sgi14s.Value.ToString(), sgi15s.Value.ToString(), sgi16s.Value.ToString(), sgi17s.Value.ToString(), sgi18s.Value.ToString(), sgi19s.Value.ToString(), sgi20s.Value.ToString(), sgi21s.Value.ToString(), sgi22s.Value.ToString(), sgi23s.Value.ToString(), sgi24s.Value.ToString(), sgi25s.Value.ToString(), sgi26s.Value.ToString(), sgi27s.Value.ToString(), sgi28s.Value.ToString(), sgi29s.Value.ToString(), sgi30s.Value.ToString(), sgi1e.Value.ToString(), sgi2e.Value.ToString(), sgi3e.Value.ToString(), sgi4e.Value.ToString(), sgi5e.Value.ToString(), sgi6e.Value.ToString(), sgi7e.Value.ToString(), sgi8e.Value.ToString(), sgi9e.Value.ToString(), sgi10e.Value.ToString(), sgi11e.Value.ToString(), sgi12e.Value.ToString(), sgi13e.Value.ToString(), sgi14e.Value.ToString(), sgi15e.Value.ToString(), sgi16e.Value.ToString(), sgi17e.Value.ToString(), sgi18e.Value.ToString(), sgi19e.Value.ToString(), sgi20e.Value.ToString(), sgi21e.Value.ToString(), sgi22e.Value.ToString(), sgi23e.Value.ToString(), sgi24e.Value.ToString(), sgi25e.Value.ToString(), sgi26e.Value.ToString(), sgi27e.Value.ToString(), sgi28e.Value.ToString(), sgi29e.Value.ToString(), sgi30e.Value.ToString() };
+            File.Delete(DB);
+            System.IO.File.AppendAllLines(DB, lines);
+            Doit();
+
 
 
             int ocount = 1;
@@ -392,14 +430,15 @@ namespace Metanet_CSV_Builder
 
             }
             String[] str = uidoe.ToArray();
-            CreateCSV("1", gi1bz.Text, (Convert.ToInt32(gi1e.Value) - Convert.ToInt32(gi1s.Value) + 1), gi1s.Value.ToString(), gi1e.Value.ToString(), "", "");
+            CreateCSV("1", gi1bz.Text, (Convert.ToInt32(gi1e.Value) - Convert.ToInt32(gi1s.Value) + 1), gi1s.Value.ToString(), gi1e.Value.ToString(), sgi1s.Value.ToString(), sgi1e.Value.ToString(), (Convert.ToInt32(sgi1e.Value) - Convert.ToInt32(sgi1s.Value) + 1));
             File.Copy(temppath2, CSVTemp + "temp1.oix", true);
 
-            for (int i = 1; i < ocount; i++)
+            for (int i = 2; i < (ocount); i++)
             {
 
 
-                CreateCSV2((i + 1).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("gi" + i + "e") as NumericUpDown).Value.ToString(), "", "", i + 1);
+                CreateCSV2((i).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("gi" + i + "e") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "e") as NumericUpDown).Value.ToString(), (Convert.ToInt32((FindName("sgi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi" + i + "s") as NumericUpDown).Value) + 1));
+                File.Copy(temppath3, CSVTemp + "temp" + (i) + ".oix", true);
             }
 
             const int chunkSize = 2 * 1024; // 2KB
@@ -410,8 +449,8 @@ namespace Metanet_CSV_Builder
             sfd.Filter = "CSV Datei|*.csv";
             sfd.ShowDialog();
 
-            try
-            {
+           /* try
+            {*/
                 using (var output = File.Create(sfd.FileName))
                 {
                     foreach (var file in inputFiles)
@@ -433,11 +472,11 @@ namespace Metanet_CSV_Builder
                 {
                     file.Delete();
                 }
-            }
+            /*}
             catch
             {
                 MessageBox.Show("Du musst schon ne Datei auswählen!!!");
-            }
+            }*/
         }
         private void gi1bz_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -1015,175 +1054,146 @@ namespace Metanet_CSV_Builder
         private void gi2load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 2.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 2.csv").ToString();
         }
 
         private void gi3load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 3.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 3.csv").ToString();
         }
 
         private void gi4load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 4.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 4.csv").ToString();
         }
 
         private void gi5load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 5.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 5.csv").ToString();
         }
 
         private void gi6load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 6.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 6.csv").ToString();
         }
 
         private void gi7load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 7.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 7.csv").ToString();
         }
 
         private void gi8load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 8.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 8.csv").ToString();
         }
 
         private void gi9load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 9.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 9.csv").ToString();
         }
 
         private void gi10load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 10.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 10.csv").ToString();
         }
 
         private void gi11load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 11.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 11.csv").ToString();
         }
 
         private void gi12load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 12.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 12.csv").ToString();
         }
 
         private void gi13load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 13.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 13.csv").ToString();
         }
 
         private void gi14load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 14.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 14.csv").ToString();
         }
 
         private void gi15load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 15.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 15.csv").ToString();
         }
 
         private void gi16load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 16.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 16.csv").ToString();
         }
 
         private void gi17load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 17.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 17.csv").ToString();
         }
 
         private void gi18load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 18.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 18.csv").ToString();
         }
 
         private void gi19load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 19.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 19.csv").ToString();
         }
 
         private void gi20load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 20.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 20.csv").ToString();
         }
 
         private void gi21load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 21.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 21.csv").ToString();
         }
 
         private void gi22load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 22.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 22.csv").ToString();
         }
 
         private void gi23load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 23.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 23.csv").ToString();
         }
 
         private void gi24load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 24.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 24.csv").ToString();
         }
 
         private void gi25load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 25.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 25.csv").ToString();
         }
 
         private void gi26load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 26.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 26.csv").ToString();
         }
 
         private void gi27load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 27.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 27.csv").ToString();
         }
 
         private void gi28load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 28.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 28.csv").ToString();
         }
 
         private void gi29load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 29.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 29.csv").ToString();
         }
 
         private void gi30load_Click(object sender, RoutedEventArgs e)
         {
             CSVImport("Zentrale 30.csv");
-            gi1lc.Content = File.GetLastWriteTime(CSVPath + "Zentrale 30.csv").ToString();
         }
     }
 }

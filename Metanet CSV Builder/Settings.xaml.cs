@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,18 @@ namespace Metanet_CSV_Builder
     /// <summary>
     /// Interaktionslogik für Start.xaml
     /// </summary>
-    public partial class Settings : Window
+    public partial class Settings : MetroWindow
     {
         public Settings()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Start win2 = new Start();
+            win2.Show();
+            Visibility = Visibility.Collapsed;
         }
     }
 }

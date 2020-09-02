@@ -1,14 +1,384 @@
-Komponente,Zusatztext,Bezeichnung,Bezeichner
-Zentrale 1,Zentrale,Z/1
-Steuergruppen 11,,S/11
-Steuergruppen 12,,S/12
-Steuergruppen 13,,S/13
-Steuergruppen 14,,S/14
-Zentrale 3,Zentrale,Z/3
-Primärleitung 324,,P/324
-Primärleitung 323,Primärleitung,P/323
-Meldergruppe 2,TEST EINGANG,G/2
-Meldergruppe 234,Test,G/234
-Melder 234/1,,M/234/1
-Steuergruppen 11,,S/11
-Steuergruppen 12,,S/12
+Melder 4503/1;Geb.45'A EG Zimmer 9;M/4503/1;
+Melder 4503/2;Geb.45'A EG Zimmer 8;M/4503/2;
+Melder 4503/3;Geb.45'A EG Zimmer 7;M/4503/3;
+Melder 4503/4;Geb.45'A EG Zimmer 6;M/4503/4;
+Melder 4503/5;Geb.45'A EG Zimmer 5;M/4503/5;
+Meldergruppe 4504;Geb.45'A EG Bewohnerzim.;G/4504;
+Melder 4504/1;Geb.45'A EG Zimmer 4;M/4504/1;
+Melder 4504/2;Geb.45'A EG Zimmer 3;M/4504/2;
+Melder 4504/3;Geb.45'A EG Zimmer 2;M/4504/3;
+Melder 4504/4;Geb.45'A EG Zimmer 1;M/4504/4;
+Meldergruppe 4505;Geb.45'A EG HFM Flur;G/4505;
+Melder 4505/1;Geb.45'A EG HFM Flur;M/4505/1;
+Meldergruppe 4506;Geb.45'A EG Flur;G/4506;
+Melder 4506/1;Geb.45'A EG Flur;M/4506/1;
+Melder 4506/2;Geb.45'A EG Flur;M/4506/2;
+Meldergruppe 4507;Geb.45'A EG Flur;G/4507;
+Melder 4507/1;Geb.45'A EG Flur;M/4507/1;
+Melder 4507/2;Geb.45'A EG Flur;M/4507/2;
+Meldergruppe 4508;Geb.45'A EG HFM Flur;G/4508;
+Melder 4508/1;Geb.45'A EG HFM Flur;M/4508/1;
+Meldergruppe 4509;Geb.45'A EG Bewohnerzim.;G/4509;
+Melder 4509/1;Geb.45'A EG Zimmer 15;M/4509/1;
+Melder 4509/2;Geb.45'A EG Zimmer 14;M/4509/2;
+Melder 4509/3;Geb.45'A EG Zimmer 13;M/4509/3;
+Melder 4509/4;Geb.45'A EG Zimmer 12;M/4509/4;
+Meldergruppe 4510;Geb.45'A EG Bewohnerzim.;G/4510;
+Melder 4510/1;Geb.45'A EG Zimmer 11;M/4510/1;
+Melder 4510/2;Geb.45'A EG Zimmer 10;M/4510/2;
+Melder 4510/3;Geb.45'A EG Zimmer 68;M/4510/3;
+Melder 4510/4;Geb.45'A EG Zimmer 67;M/4510/4;
+Meldergruppe 4511;Geb.45'A EG Wirtschaftsr.;G/4511;
+Melder 4511/1;Geb.45'A EG Wirtschaftsr;M/4511/1;
+Melder 4511/2;Geb.45'A EG Wirtschaftsr;M/4511/2;
+Meldergruppe 4512;Geb.45'A EG HFM Heizung;G/4512;
+Melder 4512/1;Geb.45'A EG HFM Heizung;M/4512/1;
+Meldergruppe 4513;Geb.45'A EG Heizung;G/4513;
+Melder 4513/1;Geb.45'A EG Heizung;M/4513/1;
+Meldergruppe 4514;Geb.45'B OG Treppenhaus;G/4514;
+Melder 4514/1;Geb.45'B Treppenhaus;M/4514/1;
+Melder 4514/3;Geb.45'B EG Verteilung;M/4514/3;
+Melder 4514/2;Geb.45'B OG Treppenhaus;M/4514/2;
+Meldergruppe 4515;Geb.45'B EG Bewohnerzim.;G/4515;
+Melder 4515/5;Geb.45'B EG Raum 36;M/4515/5;
+Melder 4515/4;Geb.45'B EG Raum 37;M/4515/4;
+Melder 4515/3;Geb.45'B EG Raum 38;M/4515/3;
+Melder 4515/2;Geb.45'B EG Raum 39;M/4515/2;
+Melder 4515/1;Geb.45'B EG Raum 40;M/4515/1;
+Meldergruppe 4516;Geb.45'B EG Bewohnerzim.;G/4516;
+Melder 4516/4;Geb.45'B EG Raum 32;M/4516/4;
+Melder 4516/3;Geb.45'B EG Raum 33;M/4516/3;
+Melder 4516/2;Geb.45'B EG Raum 34;M/4516/2;
+Melder 4516/1;Geb.45'B EG Raum 35;M/4516/1;
+Meldergruppe 4517;Geb.45'B EG HFM Flur;G/4517;
+Melder 4517/1;Geb.45'B EG HFM Flur;M/4517/1;
+Meldergruppe 4518;Geb.45'B EG Flur;G/4518;
+Melder 4518/2;Geb.45'B EG Flur;M/4518/2;
+Melder 4518/1;Geb.45'B EG Flur;M/4518/1;
+Meldergruppe 4519;Geb.45'B EG Flur;G/4519;
+Melder 4519/2;Geb.45'B EG Flur;M/4519/2;
+Melder 4519/1;Geb.45'B EG Flur;M/4519/1;
+Meldergruppe 4520;Geb.45'B EG HFM Flur;G/4520;
+Melder 4520/1;Geb.45'B EG HFM Flur;M/4520/1;
+Meldergruppe 4521;Geb.45'B EG Bewohnerzim.;G/4521;
+Melder 4521/4;Geb.45'B EG Raum 43;M/4521/4;
+Melder 4521/3;Geb.45'B EG Raum 44;M/4521/3;
+Melder 4521/2;Geb.45'B EG Raum 45;M/4521/2;
+Melder 4521/1;Geb.45'B EG Raum 46;M/4521/1;
+Meldergruppe 4522;Geb.45'B EG Bewohnerzim.;G/4522;
+Melder 4522/4;Geb.45'B EG Raum 67;M/4522/4;
+Melder 4522/3;Geb.45'B EG Raum 68;M/4522/3;
+Melder 4522/2;Geb.45'B EG Raum 41;M/4522/2;
+Melder 4522/1;Geb.45'B EG Raum 42;M/4522/1;
+Meldergruppe 4523;Geb.45'A OG Bewohnerzim.;G/4523;
+Melder 4523/1;Geb.45'A EG Zimmer 24;M/4523/1;
+Melder 4523/2;Geb.45'A EG Zimmer 23;M/4523/2;
+Melder 4523/3;Geb.45'A EG Zimmer 22;M/4523/3;
+Melder 4523/4;Geb.45'A EG Zimmer 21;M/4523/4;
+Melder 4523/5;Geb.45'A EG Zimmer 20;M/4523/5;
+Meldergruppe 4524;Geb.45'A OG Bewohnerzim.;G/4524;
+Melder 4524/1;Geb.45'A EG Zimmer 19;M/4524/1;
+Melder 4524/2;Geb.45'A EG Zimmer 18;M/4524/2;
+Melder 4524/3;Geb.45'A EG Zimmer 17;M/4524/3;
+Melder 4524/4;Geb.45'A EG Zimmer 16;M/4524/4;
+Meldergruppe 4525;Geb.45'A OG HFM Flur;G/4525;
+Melder 4525/1;Geb.45'A OG HFM Flur;M/4525/1;
+Meldergruppe 4526;Geb.45'A OG Flur;G/4526;
+Melder 4526/2;Geb.45'A OG Flur;M/4526/2;
+Melder 4526/1;Geb.45'A OG Flur;M/4526/1;
+Meldergruppe 4527;Geb.45'A OG Bewohnerzim.;G/4527;
+Melder 4527/4;Geb.45'A EG Zimmer 27;M/4527/4;
+Melder 4527/3;Geb.45'A EG Zimmer 26;M/4527/3;
+Melder 4527/2;Geb.45'A EG Zimmer 25;M/4527/2;
+Melder 4527/1;Geb.45'A EG Zimmer 66;M/4527/1;
+Meldergruppe 4528;Geb.45'A OG Bewohnerzim.;G/4528;
+Melder 4528/4;Geb.45'A EG Zimmer 31;M/4528/4;
+Melder 4528/3;Geb.45'A EG Zimmer 30;M/4528/3;
+Melder 4528/2;Geb.45'A EG Zimmer 29;M/4528/2;
+Melder 4528/1;Geb.45'A EG Zimmer 28;M/4528/1;
+Meldergruppe 4529;Geb.45'A OG HFM Flur;G/4529;
+Melder 4529/1;Geb.45'A OG HFM Flur;M/4529/1;
+Meldergruppe 4530;Geb.45'A OG Flur;G/4530;
+Melder 4530/2;Geb.45'A OG Flur;M/4530/2;
+Melder 4530/1;Geb.45'A OG Flur;M/4530/1;
+Meldergruppe 4531;Geb.45'A OG Wirtschaftsr.;G/4531;
+Melder 4531/1;Geb.45'A OG Flur;M/4531/1;
+Melder 4531/3;Geb.45'A OG Trocknen;M/4531/3;
+Melder 4531/2;Geb.45'A OG Küche;M/4531/2;
+Meldergruppe 4532;Geb.45'B OG Wirtschaftsr.;G/4532;
+Melder 4532/3;Geb.45'B OG Küche Trock;M/4532/3;
+Melder 4532/2;Geb.45'B OG Waschmaschine;M/4532/2;
+Melder 4532/1;Geb.45'B OG Trockenraum;M/4532/1;
+Meldergruppe 4533;Geb.45'B OG Flur;G/4533;
+Melder 4533/1;Geb.45'B OG Flur;M/4533/1;
+Melder 4533/2;Geb.45'B OG Flur;M/4533/2;
+Meldergruppe 4534;Geb.45'B OG HFM Flur;G/4534;
+Melder 4534/1;Geb.45'B OG HFM Flur;M/4534/1;
+Meldergruppe 4535;Geb.45'B OG Bewohnerzim.;G/4535;
+Melder 4535/4;Geb.45'B EG Raum 50;M/4535/4;
+Melder 4535/3;Geb.45'B EG Raum 49;M/4535/3;
+Melder 4535/2;Geb.45'B EG Raum 48;M/4535/2;
+Melder 4535/1;Geb.45'B EG Raum 47;M/4535/1;
+Meldergruppe 4536;Geb.45'B OG Bewohnerzim.;G/4536;
+Melder 4536/5;Geb.45'B EG Raum 55;M/4536/5;
+Melder 4536/4;Geb.45'B EG Raum 54;M/4536/4;
+Melder 4536/3;Geb.45'B EG Raum 53;M/4536/3;
+Melder 4536/2;Geb.45'B EG Raum 52;M/4536/2;
+Melder 4536/1;Geb.45'B EG Raum 51;M/4536/1;
+Meldergruppe 4537;Geb.45'B OG Flur;G/4537;
+Melder 4537/2;Geb.45'B OG Flur;M/4537/2;
+Melder 4537/1;Geb.45'B OG Flur;M/4537/1;
+Meldergruppe 4538;Geb.45'B OG Bewohnerzim.;G/4538;
+Melder 4538/4;Geb.45'B EG Raum 58;M/4538/4;
+Melder 4538/3;Geb.45'B EG Raum 57;M/4538/3;
+Melder 4538/2;Geb.45'B EG Raum 56;M/4538/2;
+Melder 4538/1;Geb.45'B EG Raum 55;M/4538/1;
+Meldergruppe 4539;Geb.45'B OG Bewohnerzim.;G/4539;
+Melder 4539/4;Geb.45'B EG Raum 62;M/4539/4;
+Melder 4539/3;Geb.45'B EG Raum 61;M/4539/3;
+Melder 4539/2;Geb.45'B EG Raum 60;M/4539/2;
+Melder 4539/1;Geb.45'B EG Raum 59;M/4539/1;
+Meldergruppe 4540;Geb.45'B OG HFM Flur;G/4540;
+Melder 4540/1;Geb.45'B OG HFM Flur;M/4540/1;
+Meldergruppe 4541;Geb.45'A DG Speicher;G/4541;
+Melder 4541/1;Geb.45'A DG Speicher;M/4541/1;
+Melder 4541/2;Geb.45'A DG Speicher;M/4541/2;
+Melder 4541/3;Geb.45'A DG Speicher;M/4541/3;
+Melder 4541/7;Geb.45'A DG Speicher;M/4541/7;
+Melder 4541/4;Geb.45'A DG Speicher;M/4541/4;
+Melder 4541/5;Geb.45'A DG Speicher;M/4541/5;
+Melder 4541/6;Geb.45'A DG Speicher;M/4541/6;
+Meldergruppe 4542;Geb.45'B DG Speicher;G/4542;
+Melder 4542/1;Geb.45'B DG Speicher;M/4542/1;
+Melder 4542/2;Geb.45'B DG Speicher;M/4542/2;
+Melder 4542/3;Geb.45'B DG Speicher;M/4542/3;
+Melder 4542/4;Geb.45'B DG Speicher;M/4542/4;
+Melder 4542/5;Geb.45'B DG Speicher;M/4542/5;
+Melder 4542/6;Geb.45'B DG Speicher;M/4542/6;
+Melder 4542/7;Geb.45'B DG Speicher;M/4542/7;
+Meldergruppe 4543;Geb.45'B EG HFM Flur;G/4543;
+Melder 4543/1;Geb.45'B EG HFM Flur;M/4543/1;
+Meldergruppe 4544;Geb.45'B EG Wirtschaftsr.;G/4544;
+Melder 4544/1;Geb.45'B EG Wirtschaftflu;M/4544/1;
+Melder 4544/2;Geb.45'B EG Waschmaschine;M/4544/2;
+Meldergruppe 4545;Geb. 45'A BMA Gehäuse;G/4545;
+Melder 4545/1;Geb.45'A EG BMA Gehäuse;M/4545/1;
+Meldergruppe 4546;Geb. 45'A Wirtschaft ZwD;G/4546;
+Melder 4546/1;Geb. 45;M/4546/1;
+Meldergruppe 4560;FSE Geb. 45;G/4560;
+Meldergruppe 4580;Koppler BMZ;G/4580;
+Melder 4580/1;Koppler Bmz;M/4580/1;
+Meldergruppe 4581;Sabotage  FSD;G/4581;
+Steuergruppen 4501;Feuer auf TWG;S/4501;
+Steuergruppen 4503;Störung an TWG;S/4503;
+Steuergruppen 4504;Alarmierung Haus 45A;S/4504;
+Steuergruppen 4505;Alarmierung Haus 45B;S/4505;
+Steuergruppen 4506;Geb.45'A EG BMA G. Lüfter;S/4506;
+Steuergruppen 4507;Feuer an FSD;S/4507;
+Steuergruppen 4508;Üe Rückmeldung an FSD;S/4508;
+Steuergruppen 4509;Blitzleuchte Haus 45A FSD;S/4509;
+Zentrale 2;Airport Weeze Haus 46;Z/2;
+Primärleitung 221;;P/221;
+Primärleitung 231;Bauteil 46 A EG OG DG;P/231;
+Primärleitung 232;Bauteil 46 B EG OG DG;P/232;
+Meldergruppe 4601;Geb.46'A EG HFM Eingang;G/4601;
+Melder 4601/1;Geb.46'A EG HFM Eingang;M/4601/1;
+Meldergruppe 4602;Geb.46'A EG Treppenhaus;G/4602;
+Melder 4602/3;Geb.46'A EG Verteilung;M/4602/3;
+Melder 4602/2;Geb.46'A OG Treppenhaus;M/4602/2;
+Melder 4602/1;Geb.46'A EG Treppenhaus;M/4602/1;
+Meldergruppe 4603;Geb.46'A EG Bewohnerzim.;G/4603;
+Melder 4603/1;Geb.46'A EG Bewohnerzim.;M/4603/1;
+Melder 4603/2;Geb.46'A EG Bewohnerzim.;M/4603/2;
+Melder 4603/3;Geb.46'A EG Bewohnerzim.;M/4603/3;
+Melder 4603/4;Geb.46'A EG Bewohnerzim.;M/4603/4;
+Melder 4603/5;Geb.46'A EG Bewohnerzim.;M/4603/5;
+Meldergruppe 4604;Geb.46'A EG Bewohnerzim.;G/4604;
+Melder 4604/1;Geb.46'A EG Bewohnerzim.;M/4604/1;
+Melder 4604/2;Geb.46'A EG Bewohnerzim.;M/4604/2;
+Melder 4604/3;Geb.46'A EG Bewohnerzim.;M/4604/3;
+Melder 4604/4;Geb.46'A EG Bewohnerzim.;M/4604/4;
+Meldergruppe 4605;Geb.46'A EG HFM Flur;G/4605;
+Melder 4605/1;Geb.46'A EG HFM Flur;M/4605/1;
+Meldergruppe 4606;Geb.46'A EG Flur;G/4606;
+Melder 4606/1;Geb.46'A EG Flur;M/4606/1;
+Melder 4606/2;Geb.46'A EG Flur;M/4606/2;
+Meldergruppe 4607;Geb.46'A EG Flur;G/4607;
+Melder 4607/1;Geb.46'A EG Flur;M/4607/1;
+Melder 4607/2;Geb.46'A EG Flur;M/4607/2;
+Meldergruppe 4608;Geb.46'A EG HFM Flur;G/4608;
+Melder 4608/1;Geb.46'A EG HFM Flur;M/4608/1;
+Meldergruppe 4609;Geb.46'A EG Bewohnerzim.;G/4609;
+Melder 4609/1;Geb.46'A EG Bewohnerzim.;M/4609/1;
+Melder 4609/2;Geb.46'A EG Bewohnerzim.;M/4609/2;
+Melder 4609/3;Geb.46'A EG Bewohnerzim.;M/4609/3;
+Melder 4609/4;Geb.46'A EG Bewohnerzim.;M/4609/4;
+Meldergruppe 4610;Geb.46'A EG Bewohnerzim.;G/4610;
+Melder 4610/1;Geb.46'A EG Bewohnerzim.;M/4610/1;
+Melder 4610/2;Geb.46'A EG Bewohnerzim.;M/4610/2;
+Melder 4610/3;Geb.46'A EG Bewohnerzim.;M/4610/3;
+Melder 4610/4;Geb.46'A EG Bewohnerzim.;M/4610/4;
+Meldergruppe 4611;Geb.46'A EG Flur;G/4611;
+Melder 4611/1;Geb.46'A EG Flur;M/4611/1;
+Melder 4611/2;Geb.46'A EG Waschmaschine;M/4611/2;
+Meldergruppe 4612;Geb.46'A EG HFM Heizung;G/4612;
+Melder 4612/1;Geb.46'A EG HFM Heizung;M/4612/1;
+Meldergruppe 4613;Geb.46'A EG Heizung;G/4613;
+Melder 4613/1;Haus46'A Heizung;M/4613/1;
+Meldergruppe 4614;Geb.46'B EG Eingang;G/4614;
+Melder 4614/2;Geb.46'B OG Flur;M/4614/2;
+Melder 4614/1;Geb.46'B EG Eingang;M/4614/1;
+Melder 4614/3;Geb.46'B EG Verteilung;M/4614/3;
+Meldergruppe 4615;Geb.46'B EG Bewohnerzim.;G/4615;
+Melder 4615/1;Geb.46'B EG Bewohnerzim.;M/4615/1;
+Melder 4615/2;Geb.46'B EG Bewohnerzim.;M/4615/2;
+Melder 4615/3;Geb.46'B EG Bewohnerzim.;M/4615/3;
+Melder 4615/4;Geb.46'B EG Bewohnerzim.;M/4615/4;
+Melder 4615/5;Geb.46'B EG Bewohnerzim.;M/4615/5;
+Meldergruppe 4616;Geb.46'B EG Bewohnerzim.;G/4616;
+Melder 4616/1;Geb.46'B EG Bewohnerzim.;M/4616/1;
+Melder 4616/2;Geb.46'B EG Bewohnerzim.;M/4616/2;
+Melder 4616/3;Geb.46'B EG Bewohnerzim.;M/4616/3;
+Melder 4616/4;Geb.46'B EG Bewohnerzim.;M/4616/4;
+Meldergruppe 4617;Geb.46'B EG HFM Flur;G/4617;
+Melder 4617/1;Geb.46'B EG HFM Flur;M/4617/1;
+Meldergruppe 4618;Geb.46'B EG Flur;G/4618;
+Melder 4618/1;Geb.46'B EG Flur;M/4618/1;
+Melder 4618/2;Geb.46'B EG Flur;M/4618/2;
+Meldergruppe 4619;Geb.46'B EG Flur;G/4619;
+Melder 4619/1;Geb.46'B EG Flur;M/4619/1;
+Melder 4619/2;Geb.46'B EG Flur;M/4619/2;
+Meldergruppe 4620;Geb.46'B EG HFM Flur;G/4620;
+Melder 4620/1;Geb.46'B EG HFM Flur;M/4620/1;
+Meldergruppe 4621;Geb.46'B EG Bewohnerzim.;G/4621;
+Melder 4621/1;Geb.46'B EG Bewohnerzim.;M/4621/1;
+Melder 4621/2;Geb.46'B EG Bewohnerzim.;M/4621/2;
+Melder 4621/3;Geb.46'B EG Bewohnerzim.;M/4621/3;
+Melder 4621/4;Geb.46'B EG Bewohnerzim.;M/4621/4;
+Meldergruppe 4622;Geb.46'B EG Bewohnerzim.;G/4622;
+Melder 4622/1;Geb.46'B EG Bewohnerzim.;M/4622/1;
+Melder 4622/2;Geb.46'B EG Bewohnerzim.;M/4622/2;
+Melder 4622/3;Geb.46'B EG Bewohnerzim.;M/4622/3;
+Melder 4622/4;Geb.46'B EG Bewohnerzim.;M/4622/4;
+Meldergruppe 4623;Geb.46'A OG Bewohnerzim.;G/4623;
+Melder 4623/1;Geb.46'A OG Bewohnerzim.;M/4623/1;
+Melder 4623/2;Geb.46'A OG Bewohnerzim.;M/4623/2;
+Melder 4623/3;Geb.46'A OG Bewohnerzim.;M/4623/3;
+Melder 4623/4;Geb.46'A OG Bewohnerzim.;M/4623/4;
+Melder 4623/5;Geb.46'A OG Bewohnerzim.;M/4623/5;
+Meldergruppe 4624;Geb.46'A OG Bewohnerzim.;G/4624;
+Melder 4624/1;Geb.46'A OG Bewohnerzim.;M/4624/1;
+Melder 4624/2;Geb.46'A OG Bewohnerzim.;M/4624/2;
+Melder 4624/3;Geb.46'A OG Bewohnerzim.;M/4624/3;
+Melder 4624/4;Geb.46'A OG Bewohnerzim.;M/4624/4;
+Meldergruppe 4625;Geb.46'A OG HFM Flur;G/4625;
+Melder 4625/1;Geb.46'A OG HFM Flur;M/4625/1;
+Meldergruppe 4626;Geb.46'A OG Flur;G/4626;
+Melder 4626/2;Geb.46'A OG Flur;M/4626/2;
+Melder 4626/1;Geb.46'A OG Flur;M/4626/1;
+Meldergruppe 4627;Geb.46'A OG Bewohnerzim.;G/4627;
+Melder 4627/4;Geb.46'A OG Bewohnerzim.;M/4627/4;
+Melder 4627/3;Geb.46'A OG Bewohnerzim.;M/4627/3;
+Melder 4627/2;Geb.46'A OG Bewohnerzim.;M/4627/2;
+Melder 4627/1;Geb.46'A OG Bewohnerzim.;M/4627/1;
+Meldergruppe 4628;Geb.46'A OG Bewohnerzim.;G/4628;
+Melder 4628/4;Geb.46'A OG Bewohnerzim.;M/4628/4;
+Melder 4628/3;Geb.46'A OG Bewohnerzim.;M/4628/3;
+Melder 4628/2;Geb.46'A OG Bewohnerzim.;M/4628/2;
+Melder 4628/1;Geb.46'A OG Bewohnerzim.;M/4628/1;
+Meldergruppe 4629;Geb.46'A OG HFM Flur;G/4629;
+Melder 4629/1;Geb.46'A OG HFM Flur;M/4629/1;
+Meldergruppe 4630;Geb.46'A OG Flur;G/4630;
+Melder 4630/2;Geb.46'A OG Flur;M/4630/2;
+Melder 4630/1;Geb.46'A OG Flur;M/4630/1;
+Meldergruppe 4631;Geb.46'A OG Wirtschaftsr.;G/4631;
+Melder 4631/1;Geb.46'A OG Flur;M/4631/1;
+Melder 4631/3;Haus 46A OG Trocknen;M/4631/3;
+Melder 4631/2;Geb.46'A OG Küche;M/4631/2;
+Meldergruppe 4632;Geb.46'B OG Wirtschaftsr.;G/4632;
+Melder 4632/1;Geb.46'B OG Zwischenflur;M/4632/1;
+Melder 4632/2;Geb.46'B OG Küche;M/4632/2;
+Melder 4632/3;Haus 46B / Küche 1.OG;M/4632/3;
+Meldergruppe 4633;Geb.46'B OG Flur;G/4633;
+Melder 4633/2;Geb.46'B OG Flur;M/4633/2;
+Melder 4633/1;Geb.46'B OG Flur;M/4633/1;
+Meldergruppe 4634;Geb.46'B OG HFM Flur;G/4634;
+Melder 4634/1;Geb.46'B OG HFM Flur;M/4634/1;
+Meldergruppe 4635;Geb.46'B EG Bewohnerzim.;G/4635;
+Melder 4635/1;Geb.46'B EG Bewohnerzim.;M/4635/1;
+Melder 4635/2;Geb.46'B EG Bewohnerzim.;M/4635/2;
+Melder 4635/3;Geb.46'B EG Bewohnerzim.;M/4635/3;
+Melder 4635/4;Geb.46'B EG Bewohnerzim.;M/4635/4;
+Meldergruppe 4636;Geb.46'B EG Bewohnerzim.;G/4636;
+Melder 4636/1;Geb.46'B EG Bewohnerzim.;M/4636/1;
+Melder 4636/2;Geb.46'B EG Bewohnerzim.;M/4636/2;
+Melder 4636/3;Geb.46'B EG Bewohnerzim.;M/4636/3;
+Melder 4636/4;Geb.46'B EG Bewohnerzim.;M/4636/4;
+Melder 4636/5;Geb.46'B EG Bewohnerzim.;M/4636/5;
+Meldergruppe 4637;Geb.46'B OG Flur;G/4637;
+Melder 4637/1;Geb.46'B OG Flur;M/4637/1;
+Melder 4637/2;Geb.46'B OG Flur;M/4637/2;
+Meldergruppe 4638;Geb.46'B EG Bewohnerzim.;G/4638;
+Melder 4638/1;Geb.46'B EG Bewohnerzim.;M/4638/1;
+Melder 4638/2;Geb.46'B EG Bewohnerzim.;M/4638/2;
+Melder 4638/3;Geb.46'B EG Bewohnerzim.;M/4638/3;
+Melder 4638/4;Geb.46'B EG Bewohnerzim.;M/4638/4;
+Meldergruppe 4639;Geb.46'B EG Bewohnerzim.;G/4639;
+Melder 4639/1;Geb.46'B EG Bewohnerzim.;M/4639/1;
+Melder 4639/2;Geb.46'B EG Bewohnerzim.;M/4639/2;
+Melder 4639/3;Geb.46'B EG Bewohnerzim.;M/4639/3;
+Melder 4639/4;Geb.46'B EG Bewohnerzim.;M/4639/4;
+Meldergruppe 4640;Geb.46'B OG HFM Flur;G/4640;
+Melder 4640/1;Geb.46'B OG HFM Flur;M/4640/1;
+Meldergruppe 4641;Geb.46'A DG Speicher;G/4641;
+Melder 4641/1;Geb.46'A DG Speicher;M/4641/1;
+Melder 4641/2;Geb.46'A DG Speicher;M/4641/2;
+Melder 4641/3;Geb.46'A DG Speicher;M/4641/3;
+Melder 4641/7;Geb.46'A DG Speicher;M/4641/7;
+Melder 4641/4;Geb.46'A DG Speicher;M/4641/4;
+Melder 4641/5;Geb.46'A DG Speicher;M/4641/5;
+Melder 4641/6;Geb.46'A DG Speicher;M/4641/6;
+Meldergruppe 4642;Geb.46'B DG Speicher;G/4642;
+Melder 4642/7;Geb.46'B DG Speicher;M/4642/7;
+Melder 4642/6;Geb.46'B DG Speicher;M/4642/6;
+Melder 4642/5;Geb.46'B DG Speicher;M/4642/5;
+Melder 4642/4;Geb.46'B DG Speicher;M/4642/4;
+Melder 4642/1;Geb.46'B DG Speicher;M/4642/1;
+Melder 4642/2;Geb.46'B DG Speicher;M/4642/2;
+Melder 4642/3;Geb.46'B DG Speicher;M/4642/3;
+Meldergruppe 4643;Geb.46'B EG HFM Flur;G/4643;
+Melder 4643/1;;M/4643/1;
+Meldergruppe 4644;Geb.46'B EG Wirtschaftsr.;G/4644;
+Melder 4644/2;Geb.46'B EG Wirtschaft;M/4644/2;
+Melder 4644/1;Geb.46'B EG Wirtschaft;M/4644/1;
+Meldergruppe 4645;Geb.46'A BMA Gehäuse;G/4645;
+Melder 4645/1;Geb.46'A BMA Gehäuse;M/4645/1;
+Steuergruppen 4601;Feuer zum TWG;S/4601;
+Steuergruppen 4603;Störung an TWG;S/4603;
+Steuergruppen 4604;Alarmierung Haus 46A;S/4604;
+Steuergruppen 4605;Alarmierung Haus 46B;S/4605;
+Steuergruppen 4606;Geb.46'A EG BMA G. Lüfter;S/4606;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,14 +1,247 @@
-Komponente,Zusatztext,Bezeichnung,Bezeichner
-Zentrale 1,Zentrale,Z/1
-Steuergruppen 11,,S/11
-Steuergruppen 12,,S/12
-Steuergruppen 13,,S/13
-Steuergruppen 14,,S/14
-Zentrale 3,Zentrale,Z/3
-Primärleitung 324,,P/324
-Primärleitung 323,Primärleitung,P/323
-Meldergruppe 2,TEST EINGANG,G/2
-Meldergruppe 234,Test,G/234
-Melder 234/1,,M/234/1
-Steuergruppen 11,,S/11
-Steuergruppen 12,,S/12
+Komponente;Zusatztext;Bezeichnung;Bezeichner
+Zentrale 2;Johanneshaus;Z/2;
+Primärleitung 224;;P/224;
+Primärleitung 231;Kloster der Heimsuchung;P/231;
+Primärleitung 232;Johanneshaus;P/232;
+Meldergruppe 60;HFM KG Johanneshaus Flur;G/60;
+Melder 60/1;HFM KG Flur RA 812;M/60/1;
+Meldergruppe 61; KG Johanneshaus Flur TH;G/61;
+Melder 61/1;KG HAR RA 813;M/61/1;
+Melder 61/2;KG  Flur TH RA 812;M/61/2;
+Meldergruppe 62;KG Johanneshaus Technik;G/62;
+Melder 62/5;KG Flur RA 807;M/62/5;
+Melder 62/3;KG Hausmeister RA 803;M/62/3;
+Melder 62/2;KG Flur RA 802;M/62/2;
+Melder 62/1;KG Heizung RA 801;M/62/1;
+Melder 62/10;KG Aufzugsraum RA 811;M/62/10;
+Melder 62/9;KG Flur RA 810;M/62/9;
+Melder 62/11;KG Abstellraum RA 814;M/62/11;
+Melder 62/12;KG WC RA 809;M/62/12;
+Melder 62/4;KG Flur RA 807;M/62/4;
+Melder 62/8;KG PuMi RA 806;M/62/8;
+Melder 62/7;KG Notlicht RA 805;M/62/7;
+Melder 62/6;KG Technik EDV RA804;M/62/6;
+Meldergruppe 63;KG BMZ Umschrank;G/63;
+Melder 63/1;KG BMZ Umschrank;M/63/1;
+Meldergruppe 70;HFM EG Johanneshaus  ;G/70;
+Melder 70/1;HFM EG Eingang RA 628;M/70/1;
+Melder 70/2;HFM EG Flur RA 623;M/70/2;
+Meldergruppe 71;HFM EG Johanneshaus WB;G/71;
+Melder 71/1;HFM EG WB Flur RA 621;M/71/1;
+Meldergruppe 72;HFM EG Johanneshaus Flur;G/72;
+Melder 72/1;HFM EG WB Flur RA 617;M/72/1;
+Meldergruppe 73;HFM EG Johanneshaus WB;G/73;
+Melder 73/1;HFM EG Wohnbereich RA 620;M/73/1;
+Meldergruppe 74;EG Johanneshaus ;G/74;
+Melder 74/3;EG Flur Eingang RA 628;M/74/3;
+Melder 74/1;EG Mehrzwegraum RA 625;M/74/1;
+Melder 74/2;EG Mehrzwegraum RA 625;M/74/2;
+Melder 74/4;EG Flur Eingang RA 623;M/74/4;
+Melder 74/6;EG Flur Eingang RA 623;M/74/6;
+Melder 74/5;EG Nebenraum RA 612;M/74/5;
+Meldergruppe 75;EG Johanneshaus WB;G/75;
+Melder 75/7;EG WB Bewohner RA 610;M/75/7;
+Melder 75/8;EG WB Abstellraum RA 622;M/75/8;
+Melder 75/2;EG WB Flur RA 621 ;M/75/2;
+Melder 75/3;EG WB HWR RA 613;M/75/3;
+Melder 75/4;EG WB Bewohner RA 602;M/75/4;
+Melder 75/1;EG WB Flur RA 621;M/75/1;
+Melder 75/5;EG WB Bewohner RA 601;M/75/5;
+Melder 75/6;EG WB Bewohner RA 611;M/75/6;
+Meldergruppe 76;EG Johanneshaus;G/76;
+Melder 76/6;EG Wohnen/Esssen RA 620;M/76/6;
+Melder 76/4;EG Wohnen/Esssen RA 620;M/76/4;
+Melder 76/7;EG WB Abstellraum RA 619;M/76/7;
+Melder 76/5;EG Wohnen/Esssen RA 620;M/76/5;
+Melder 76/3;EG Wohnen/Esssen RA 620;M/76/3;
+Melder 76/8;EG WB Abstellraum RA 618;M/76/8;
+Melder 76/2;EG WB Bewohner RA 604;M/76/2;
+Melder 76/1;EG WB Bewohner RA 603;M/76/1;
+Meldergruppe 77;EG Johanneshaus TH;G/77;
+Melder 77/1;EG Treppenhaus RA 628;M/77/1;
+Melder 77/2;EG Abstellraum RA 628;M/77/2;
+Meldergruppe 78;HFM EG Johnneshaus TH;G/78;
+Melder 78/1;HFM EG Ausgang TH RA 628;M/78/1;
+Meldergruppe 79;EG Johanneshaus WB;G/79;
+Melder 79/4;EG WB Bewohner RA 609;M/79/4;
+Melder 79/5;EG WB Bewohner RA 608;M/79/5;
+Melder 79/6;EG WB Bewohner RA 607;M/79/6;
+Melder 79/3;EG WB Flur RA 617;M/79/3;
+Melder 79/7;EG WB Bewohner RA 606;M/79/7;
+Melder 79/10;EG WB Abstellraum RA 629;M/79/10;
+Melder 79/8;EG WB Bewohner RA 605;M/79/8;
+Melder 79/9;EG WB Bewohner RA 614;M/79/9;
+Melder 79/1;EG WB Flur RA 617;M/79/1;
+Melder 79/2;EG WB Flur RA 617;M/79/2;
+Meldergruppe 80;HFM 1.OG Johanneshaus TH;G/80;
+Melder 80/1;HFM 1.OG Flur TH RA 523;M/80/1;
+Meldergruppe 81;HFM 1.OG Johanneshaus ;G/81;
+Melder 81/1;HFM 1.OG WB Flur RA 521;M/81/1;
+Melder 81/2;HFM 1.OG Gang RA 513;M/81/2;
+Meldergruppe 82;HFM 1.OG Johanneshaus ;G/82;
+Melder 82/1;HFM 1.OG Wohnen RA 520 ;M/82/1;
+Meldergruppe 83;HFM 1.OG Johanneshaus ;G/83;
+Melder 83/1;HFM 1.OG TH RA 526;M/83/1;
+Meldergruppe 84;HFM 1.OG Johanneshaus WB ;G/84;
+Melder 84/1;HFM 1.OG WB Flur RA 517;M/84/1;
+Meldergruppe 85;1.OG Johanneshaus ;G/85;
+Melder 85/3;1.OG  RA 512;M/85/3;
+Melder 85/1;1.OG Flur TH RA 523;M/85/1;
+Melder 85/2;1.OG Lager RA 524;M/85/2;
+Meldergruppe 86;1.OG Johanneshaus WB;G/86;
+Melder 86/7;1.OG WB Bewohner RA 511;M/86/7;
+Melder 86/5;1.OG WB Bewohner RA 501;M/86/5;
+Melder 86/1;1.OG WB Flur RA 521;M/86/1;
+Melder 86/4;1.OG WB Bewohner RA 502;M/86/4;
+Melder 86/3;1.OG WB Flur/Gang  RA 513;M/86/3;
+Melder 86/2;1.OG WB Flur RA 521;M/86/2;
+Melder 86/9;1.OG WB Abstellra. RA 522;M/86/9;
+Melder 86/8;1.OG WB Bewohner RA 510;M/86/8;
+Meldergruppe 87;1.OG Johanneshaus WB;G/87;
+Melder 87/7;1.OG WB Bewohner RA 503;M/87/7;
+Melder 87/6;1.OG WB Bewohner RA 504;M/87/6;
+Melder 87/8;1.OG WB Abstellra. RA 518;M/87/8;
+Melder 87/5;1.OG WB Wohnen RA 519;M/87/5;
+Melder 87/3;1.OG WB Wohnen RA 520;M/87/3;
+Melder 87/2;1.OG WB Wohnen RA 520;M/87/2;
+Melder 87/1;1.OG WB Wohnen RA 520;M/87/1;
+Melder 87/4;1.OG WB Wohnen RA 520;M/87/4;
+Meldergruppe 88;1.OG Johanneshaus WB ;G/88;
+Melder 88/1;1.OG WB Flur RA 517;M/88/1;
+Melder 88/9;1.OG WB HWR RA 5014;M/88/9;
+Melder 88/8;1.OG WB Bewohner RA 505;M/88/8;
+Melder 88/10;1.OG WB Abstellra. RA 525;M/88/10;
+Melder 88/7;1.OG WB Bewohner RA 506;M/88/7;
+Melder 88/3;1.OG WB Flur RA 517;M/88/3;
+Melder 88/6;1.OG WB Bewohner RA 507;M/88/6;
+Melder 88/2;1.OG WB Flur RA 517;M/88/2;
+Melder 88/5;1.OG WB Bewohner RA 508;M/88/5;
+Melder 88/4;1.OG WB Bewohner RA 509;M/88/4;
+Meldergruppe 89;1.OG Johanneshaus TH;G/89;
+Melder 89/1;1.OG TH RA 526;M/89/1;
+Meldergruppe 90;1.OG Verbingungsgang ;G/90;
+Melder 90/1;1.OG Verbindungsgang;M/90/1;
+Melder 90/2;1.OG Verbindungsgang;M/90/2;
+Melder 90/3;1.OG Verbindungsgang;M/90/3;
+Melder 90/4;1.OG Verbindungsgang;M/90/4;
+Meldergruppe 91;HFM 2.OG Johanneshaus ;G/91;
+Melder 91/1;HFM 2.OG TH Flur RA 704;M/91/1;
+Meldergruppe 92;2.OG Johanneshaus TH;G/92;
+Melder 92/3;2.OG Dachraum RA 707;M/92/3;
+Melder 92/1;2.OG TH Flur RA 704;M/92/1;
+Melder 92/2;2.OG Dachraum RA 706;M/92/2;
+Meldergruppe 93;2.OG Johanneshaus ;G/93;
+Melder 93/1;Aufzugsschacht;M/93/1;
+Meldergruppe 94;2.OG Johanneshaus ;G/94;
+Melder 94/3;2.OG Besprechung RA 702;M/94/3;
+Melder 94/1;2.OG Flur RA 703;M/94/1;
+Melder 94/2;2.OG Büro RA 701;M/94/2;
+Meldergruppe 95;2.OG Johanneshaus ;G/95;
+Melder 95/1;2.OG Abstellraum RA 708;M/95/1;
+Meldergruppe 96;2.OG Johanneshaus;G/96;
+Melder 96/5;2.OG Dachboden;M/96/5;
+Melder 96/4;2.OG Dachboden;M/96/4;
+Melder 96/3;2.OG Dachboden;M/96/3;
+Melder 96/2;2.OG Dachboden;M/96/2;
+Melder 96/1;2.OG Dachboden;M/96/1;
+Meldergruppe 99;Koppler Aufzugsteuerung;G/99;
+Melder 99/1;Koppler neb. Steuerung KG;M/99/1;
+Melder 99/2;Koppler neb. Steuerung KG;M/99/2;
+Melder 99/4;Koppler neb. Steuerung KG;M/99/4;
+Melder 99/3;Koppler neb. Steuerung KG;M/99/3;
+Meldergruppe 201;Kloster EG Flur DKM;G/201;
+Melder 201/1;Kloster EG Flur DKM;M/201/1;
+Meldergruppe 202;Kloster1.EG Flur DKM;G/202;
+Melder 202/1;Kloster EG Flur DKM;M/202/1;
+Meldergruppe 203;Kloster EG Flur;G/203;
+Melder 203/2;Kloster EG Flur;M/203/2;
+Melder 203/1;Kloster EG Flur;M/203/1;
+Meldergruppe 204;Kloster Erdgeschoss;G/204;
+Melder 204/4;Kloster HAR;M/204/4;
+Melder 204/3;Kloster Noviziat;M/204/3;
+Melder 204/2;Kloster Noviziat;M/204/2;
+Melder 204/1;Kloster Büro;M/204/1;
+Meldergruppe 205;Kloster Erdgeschoss;G/205;
+Melder 205/1;Kloster EG Küche;M/205/1;
+Meldergruppe 206;Kloster Erdgeschoss;G/206;
+Melder 206/1;Kloster Speiseraum;M/206/1;
+Melder 206/2;Kloster Speiseraum;M/206/2;
+Melder 206/3;Kloster EG Wohnzimmer;M/206/3;
+Melder 206/4;Kloster EG Wohnzimmer;M/206/4;
+Melder 206/5;Kloster EG Wohnzimmer;M/206/5;
+Meldergruppe 207;Kloster 1.OG Flur;G/207;
+Melder 207/1;Kloster 1.OG Flur;M/207/1;
+Melder 207/4;Kloster 1.OG Flur;M/207/4;
+Melder 207/2;Kloster 1.OG Flur;M/207/2;
+Melder 207/3;Kloster 1.OG Flur;M/207/3;
+Meldergruppe 208;Kloster 1.OG ;G/208;
+Melder 208/3;Kloster 1.OG Bügelzimmer;M/208/3;
+Melder 208/2;Kloster 1.OG Bügelzimmer;M/208/2;
+Melder 208/1;Kloster 1 OG Technik;M/208/1;
+Meldergruppe 209;Kloster 1.OG Appartements;G/209;
+Melder 209/1;Kloster 1.OG Appartements;M/209/1;
+Melder 209/2;Kloster 1.OG Appartements;M/209/2;
+Melder 209/3;Kloster 1.OG Appartements;M/209/3;
+Melder 209/4;Kloster 1.OG Appartements;M/209/4;
+Melder 209/5;Kloster 1.OG Appartements;M/209/5;
+Melder 209/6;Kloster 1.OG Appartements;M/209/6;
+Meldergruppe 210;Kloster 1.OG ;G/210;
+Melder 210/3;Kloster Appartments;M/210/3;
+Melder 210/1;Kloster 1.OG Kapelle;M/210/1;
+Melder 210/2;Kloster 1.OG Kapelle;M/210/2;
+Melder 210/4;Kloster Appartments;M/210/4;
+Meldergruppe 211;Kloster Eg Flur;G/211;
+Melder 211/1;Kloster EG Flur;M/211/1;
+Melder 211/2;Kloster EG Flur;M/211/2;
+Melder 211/4;Kloster EG Flur;M/211/4;
+Melder 211/3;Kloster EG Flur;M/211/3;
+Meldergruppe 212;Kloster  EG Räume ;G/212;
+Melder 212/1;Kloster  EG Räume ;M/212/1;
+Melder 212/2;Kloster  EG Räume ;M/212/2;
+Melder 212/3;Kloster  EG Räume ;M/212/3;
+Melder 212/4;Kloster  EG Räume ;M/212/4;
+Melder 212/5;Kloster  EG Räume ;M/212/5;
+Melder 212/6;Kloster  EG Räume ;M/212/6;
+Meldergruppe 214;Kloster Treppenhaus OG;G/214;
+Melder 214/1;Kloster 1.OG Flur;M/214/1;
+Melder 214/2;Kloster 1.OG Flur;M/214/2;
+Meldergruppe 215;Kloster Treppenhaus EG;G/215;
+Melder 215/2;Kloster EG Flur;M/215/2;
+Melder 215/1;Kloster EG Flur;M/215/1;
+Meldergruppe 216;Kloster OG Flur;G/216;
+Melder 216/1;Kloster 1.OG Flur;M/216/1;
+Melder 216/2;Kloster 1.OG Flur;M/216/2;
+Melder 216/4;Kloster 1.OG Flur;M/216/4;
+Melder 216/3;Kloster 1.OG Flur;M/216/3;
+Meldergruppe 217;Kloster OG DKM Appartmet.;G/217;
+Melder 217/1;Kloster1.OG Flur DKM;M/217/1;
+Meldergruppe 218;Kloster OG Appartment ;G/218;
+Melder 218/1;Kloster OG Appartments;M/218/1;
+Meldergruppe 219;Kloster DKM Treppenhaus;G/219;
+Melder 219/1;Kloster1.OG Flur DKM;M/219/1;
+Meldergruppe 220;Kloster DKM Kapelle;G/220;
+Melder 220/1;Kloster1.OG Flur DKM;M/220/1;
+Meldergruppe 299;FCT-Koppler Aufugsmasch.;G/299;
+Melder 299/1;FCT in Aufz.maschienenra.;M/299/1;
+Melder 299/2;FCT in Aufz.maschienenra.;M/299/2;
+Steuergruppen 200;Feuer v. 2OG J-Haus;S/200;
+Steuergruppen 201;Sirenen Kloster;S/201;
+Steuergruppen 202;Aufzug Feuer v.EG Kloster;S/202;
+Steuergruppen 203;Aufzug Feuer v.OG Kloster;S/203;
+Steuergruppen 204;Feuer von KG J-Haus;S/204;
+Steuergruppen 205;Feuer von EG J-Haus;S/205;
+Steuergruppen 206;Feuer von OG J-Haus;S/206;
+Steuergruppen 207;Sirenen Johanneshaus KG;S/207;
+Steuergruppen 208;Sirenen Johanneshaus DG;S/208;
+
+
+
+
+
+
+
+
+
+
+
+

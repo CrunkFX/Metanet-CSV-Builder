@@ -30,6 +30,7 @@ namespace Metanet_CSV_Builder
         {
             Settings win2 = new Settings();
             win2.Show();
+            Visibility = Visibility.Collapsed;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -72,10 +73,18 @@ namespace Metanet_CSV_Builder
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            File.Delete(path + "/.SUBNET-A Lange Bezeichner.csv");
-            File.Delete(path + "/.SUBNET-B Lange Bezeichner.csv");
-            File.Delete(path + "/.SUBNET-C Lange Bezeichner.csv");
-            File.Delete(path + "/.Backbone Lange Bezeichner.csv");
+            try
+            {
+                File.Delete(path + "/.SUBNET-A Lange Bezeichner.csv");
+                File.Delete(path + "/.SUBNET-B Lange Bezeichner.csv");
+                File.Delete(path + "/.SUBNET-C Lange Bezeichner.csv");
+                File.Delete(path + "/.Backbone Lange Bezeichner.csv");
+            }
+            catch
+            {
+                MessageBox.Show("Err. 21  ---  Bitte die Dateien auf dem Desktop Mauell löschen!");
+            }
+            System.Windows.Application.Current.Shutdown();
             base.OnClosing(e);
         }
     }
