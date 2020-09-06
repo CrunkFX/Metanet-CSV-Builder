@@ -21,7 +21,7 @@ namespace Metanet_CSV_Builder
     public partial class SubnetB : MetroWindow
     {
 
-        
+
         string CSVPath = "bin/opt/Backbone/";
         string CSVTemp = "bin/lib/temp/";
         string DB = "bin/lib/db/Database.mcb";
@@ -33,11 +33,11 @@ namespace Metanet_CSV_Builder
         //Globale Variablen
 
         //CSV Dateiordner
-        
-        
+
+
 
         //Datenbank
-        
+
 
 
 
@@ -46,7 +46,17 @@ namespace Metanet_CSV_Builder
         {
             InitializeComponent();
             ok.Visibility = Visibility.Hidden;
-            
+            GICount = 1;
+            InitCounter();
+            InitLastChange();
+            InitBezeichner();
+            InitCSV();
+            InitMGIStart();
+            InitMGIEnd();
+            InitSGIStart();
+            InitSGIEnd();
+
+
             /* for (int i = 1; i < 31; i++)
              {
                  (FindName("gi" + i + "lc") as Label).Content = File.GetLastWriteTime(CSVPath + "Zentrale " + i + ".csv").ToString();
@@ -126,19 +136,33 @@ namespace Metanet_CSV_Builder
 
      */
         }
-        
-        
+
+
         private void AddToGI_click(object sender, RoutedEventArgs e)
         {
-            //if((FindName("sgi" + (i + 1) + "e") as NumericUpDown).)
 
-            // Anzahl Gruppenintervalle ermitteln
-            GICount = SPCount.Children.Count + 1;
+            if ((FindName($"gi{GICount}bz") as TextBox).Text.Length >= 1)
+            {
+                GICount = SPCount.Children.Count + 1;
+                InitCounter();
+                InitLastChange();
+                InitBezeichner();
+                InitCSV();
+                InitMGIStart();
+                InitMGIEnd();
+                InitSGIStart();
+                InitSGIEnd();
+            }
+            else { };
+        }
 
-            // Zähler erstellen
+        void InitCounter()
+        {
             SPCount.Children.Add(new Label() { Content = GICount.ToString(), Margin = new Thickness(0, 0, 0, 10), FontWeight = FontWeights.Bold, Height = 27 });
+        }
 
-            // CSV Lade-Button definieren
+        void InitCSV()
+        {
             Button loadCSV = new Button();
             loadCSV.Content = GICount.ToString();
             loadCSV.Name = "Zentrale" + GICount.ToString();
@@ -146,23 +170,140 @@ namespace Metanet_CSV_Builder
             loadCSV.FontWeight = FontWeights.Bold;
             loadCSV.Height = 27;
             loadCSV.Click += LoadCSV;
-
-            // CSV Lade-Button hinzufügen
             SPCSV.Children.Add(loadCSV);
-
-            // Änderungsdatum Anzeigen
-            SPLastChange.Children.Add(new Label() {Name = "gi" + GICount.ToString() +"lc" , Content = File.GetLastWriteTime(CSVPath + "Zentrale" + GICount.ToString() + ".csv").ToString(), Margin = new Thickness(0, 0, 0, 10), FontWeight = FontWeights.Bold, Height = 27 });
-           
-            // Bezeichnerfeld Initialisieren
-
-
-
         }
-        private void RemoveFromGI_click(object sender, RoutedEventArgs e)
+
+        void InitLastChange()
         {
-            (FindName("gi" + GICount + "lc") as Label).Visibility = Visibility.Hidden;
+            TextBlock lastchange = new TextBlock();
+            lastchange.Name = $"gi{GICount}lc";
+            lastchange.Text = File.GetLastWriteTime(CSVPath + $"Zentrale{GICount}.csv").ToString();
+            lastchange.Margin = new Thickness(0, 0, 0, 10);
+            lastchange.FontWeight = FontWeights.Bold;
+            lastchange.Height = 27;
+            HorizontalAlignment = HorizontalAlignment.Center;
+            RegisterTextBlock($"gi{GICount}lc", lastchange);
+            SPLastChange.Children.Add(lastchange);
         }
 
+        void InitBezeichner()
+        {
+            TextBox bezeichner = new TextBox();
+            bezeichner.Name = $"gi{GICount}bz";
+            bezeichner.Margin = new Thickness(0, 0, 0, 10);
+            bezeichner.FontWeight = FontWeights.Bold;
+            bezeichner.Height = 27;
+            bezeichner.MinWidth = 200;
+            RegisterNewTextBox($"gi{GICount}bz", bezeichner);
+            SPBezeichner.Children.Add(bezeichner);
+        }
+
+        void InitMGIStart()
+        {
+            NumericUpDown numgistart = new NumericUpDown();
+            numgistart.Name = $"gi{GICount}s";
+            numgistart.Margin = new Thickness(0, 0, 0, 10);
+            numgistart.FontWeight = FontWeights.Bold;
+            numgistart.Height = 27;
+            numgistart.MinWidth = 80;
+            numgistart.Minimum = 0;
+            numgistart.Maximum = 9999;
+            numgistart.NumericInputMode = NumericInput.Numbers;
+            numgistart.HideUpDownButtons = true;
+            numgistart.Value = 0;
+            RegisterNumBlock($"gi{GICount}s", numgistart);
+            SPMGS.Children.Add(numgistart);
+        }
+
+        void InitMGIEnd()
+        {
+            NumericUpDown numgiend = new NumericUpDown();
+            numgiend.Name = $"gi{GICount}s";
+            numgiend.Margin = new Thickness(0, 0, 0, 10);
+            numgiend.FontWeight = FontWeights.Bold;
+            numgiend.Height = 27;
+            numgiend.MinWidth = 80;
+            numgiend.Minimum = 0;
+            numgiend.Maximum = 9999;
+            numgiend.NumericInputMode = NumericInput.Numbers;
+            numgiend.HideUpDownButtons = true;
+            numgiend.Value = 0;
+            RegisterNumBlock($"gi{GICount}s", numgiend);
+            SPMGE.Children.Add(numgiend);
+        }
+
+        void InitSGIStart()
+        {
+            NumericUpDown numsgistart = new NumericUpDown();
+            numsgistart.Name = $"gi{GICount}s";
+            numsgistart.Margin = new Thickness(0, 0, 0, 10);
+            numsgistart.FontWeight = FontWeights.Bold;
+            numsgistart.Height = 27;
+            numsgistart.MinWidth = 80;
+            numsgistart.Minimum = 0;
+            numsgistart.Maximum = 9999;
+            numsgistart.NumericInputMode = NumericInput.Numbers;
+            numsgistart.HideUpDownButtons = true;
+            numsgistart.Value = 0;
+            RegisterNumBlock($"gi{GICount}s", numsgistart);
+            SPSGS.Children.Add(numsgistart);
+        }
+
+        void InitSGIEnd()
+        {
+            NumericUpDown numsgiend = new NumericUpDown();
+            numsgiend.Name = $"gi{GICount}s";
+            numsgiend.Margin = new Thickness(0, 0, 0, 10);
+            numsgiend.FontWeight = FontWeights.Bold;
+            numsgiend.Height = 27;
+            numsgiend.MinWidth = 80;
+            numsgiend.Minimum = 0;
+            numsgiend.Maximum = 9999;
+            numsgiend.NumericInputMode = NumericInput.Numbers;
+            numsgiend.HideUpDownButtons = true;
+            numsgiend.Value = 0;
+            RegisterNumBlock($"gi{GICount}s", numsgiend);
+            SPSGE.Children.Add(numsgiend);
+        }
+
+
+        void RegisterTextBlock(string textBlockName, TextBlock textBlock)
+        {
+            if ((TextBlock)FindName(textBlockName) != null)
+                UnregisterName(textBlockName);
+            RegisterName(textBlockName, textBlock);
+        }
+
+        void RegisterNumBlock(string numname, NumericUpDown num)
+        {
+            if ((NumericUpDown)FindName(numname) != null)
+                UnregisterName(numname);
+            RegisterName(numname, num);
+        }
+
+        void RegisterNewTextBox(string textboxname, TextBox textbox)
+        {
+            if ((TextBox)FindName(textboxname) != null)
+                UnregisterName(textboxname);
+            RegisterName(textboxname, textbox);
+        }
+
+
+        private void RemoveFromGI_click(object sender, RoutedEventArgs e)
+        { 
+            if (SPCount.Children.Count > 1)
+            {
+                SPCount.Children.Remove((UIElement)this.FindName("bar5")); 
+                SPCSV.Children.Remove((UIElement)this.FindName("bar5")); 
+               /* SPBezeichner.Children.RemoveAt(SPCount.Children.Count);
+                SPLastChange.Children.RemoveAt(SPCount.Children.Count);
+                SPMGE.Children.RemoveAt(SPCount.Children.Count);
+                SPMGS.Children.RemoveAt(SPCount.Children.Count);
+                SPSGE.Children.RemoveAt(SPCount.Children.Count);
+                SPSGS.Children.RemoveAt(SPCount.Children.Count);*/
+                GICount = GICount - 1;
+            }
+        }
 
 
 
@@ -170,7 +311,7 @@ namespace Metanet_CSV_Builder
         private void LoadCSV(object sender, RoutedEventArgs e)
         {
             ofd.ShowDialog();
-            File.Copy(ofd.FileName, CSVPath+ ((Button)sender).Name +".csv", true);
+            File.Copy(ofd.FileName, CSVPath + ((Button)sender).Name + ".csv", true);
         }
 
 
@@ -251,7 +392,7 @@ namespace Metanet_CSV_Builder
 
         //CSV Laden
 
-    
+
         private async Task Doit()
         {
             ok.Visibility = Visibility.Visible;
@@ -266,9 +407,9 @@ namespace Metanet_CSV_Builder
             string tempdb = System.IO.Path.GetTempFileName();
             //string[] lines = { gi1bz.Text, gi2bz.Text, gi3bz.Text, gi4bz.Text, gi5bz.Text, gi6bz.Text, gi7bz.Text, gi8bz.Text, gi9bz.Text, gi10bz.Text, gi11bz.Text, gi12bz.Text, gi13bz.Text, gi14bz.Text, gi15bz.Text, gi16bz.Text, gi17bz.Text, gi18bz.Text, gi19bz.Text, gi20bz.Text, gi21bz.Text, gi22bz.Text, gi23bz.Text, gi24bz.Text, gi25bz.Text, gi26bz.Text, gi27bz.Text, gi28bz.Text, gi29bz.Text, gi30bz.Text, gi1s.Value.ToString(), gi2s.Value.ToString(), gi3s.Value.ToString(), gi4s.Value.ToString(), gi5s.Value.ToString(), gi6s.Value.ToString(), gi7s.Value.ToString(), gi8s.Value.ToString(), gi9s.Value.ToString(), gi10s.Value.ToString(), gi11s.Value.ToString(), gi12s.Value.ToString(), gi13s.Value.ToString(), gi14s.Value.ToString(), gi15s.Value.ToString(), gi16s.Value.ToString(), gi17s.Value.ToString(), gi18s.Value.ToString(), gi19s.Value.ToString(), gi20s.Value.ToString(), gi21s.Value.ToString(), gi22s.Value.ToString(), gi23s.Value.ToString(), gi24s.Value.ToString(), gi25s.Value.ToString(), gi26s.Value.ToString(), gi27s.Value.ToString(), gi28s.Value.ToString(), gi29s.Value.ToString(), gi30s.Value.ToString(), gi1e.Value.ToString(), gi2e.Value.ToString(), gi3e.Value.ToString(), gi4e.Value.ToString(), gi5e.Value.ToString(), gi6e.Value.ToString(), gi7e.Value.ToString(), gi8e.Value.ToString(), gi9e.Value.ToString(), gi10e.Value.ToString(), gi11e.Value.ToString(), gi12e.Value.ToString(), gi13e.Value.ToString(), gi14e.Value.ToString(), gi15e.Value.ToString(), gi16e.Value.ToString(), gi17e.Value.ToString(), gi18e.Value.ToString(), gi19e.Value.ToString(), gi20e.Value.ToString(), gi21e.Value.ToString(), gi22e.Value.ToString(), gi23e.Value.ToString(), gi24e.Value.ToString(), gi25e.Value.ToString(), gi26e.Value.ToString(), gi27e.Value.ToString(), gi28e.Value.ToString(), gi29e.Value.ToString(), gi30e.Value.ToString(), sgi1s.Value.ToString(), sgi2s.Value.ToString(), sgi3s.Value.ToString(), sgi4s.Value.ToString(), sgi5s.Value.ToString(), sgi6s.Value.ToString(), sgi7s.Value.ToString(), sgi8s.Value.ToString(), sgi9s.Value.ToString(), sgi10s.Value.ToString(), sgi11s.Value.ToString(), sgi12s.Value.ToString(), sgi13s.Value.ToString(), sgi14s.Value.ToString(), sgi15s.Value.ToString(), sgi16s.Value.ToString(), sgi17s.Value.ToString(), sgi18s.Value.ToString(), sgi19s.Value.ToString(), sgi20s.Value.ToString(), sgi21s.Value.ToString(), sgi22s.Value.ToString(), sgi23s.Value.ToString(), sgi24s.Value.ToString(), sgi25s.Value.ToString(), sgi26s.Value.ToString(), sgi27s.Value.ToString(), sgi28s.Value.ToString(), sgi29s.Value.ToString(), sgi30s.Value.ToString(), sgi1e.Value.ToString(), sgi2e.Value.ToString(), sgi3e.Value.ToString(), sgi4e.Value.ToString(), sgi5e.Value.ToString(), sgi6e.Value.ToString(), sgi7e.Value.ToString(), sgi8e.Value.ToString(), sgi9e.Value.ToString(), sgi10e.Value.ToString(), sgi11e.Value.ToString(), sgi12e.Value.ToString(), sgi13e.Value.ToString(), sgi14e.Value.ToString(), sgi15e.Value.ToString(), sgi16e.Value.ToString(), sgi17e.Value.ToString(), sgi18e.Value.ToString(), sgi19e.Value.ToString(), sgi20e.Value.ToString(), sgi21e.Value.ToString(), sgi22e.Value.ToString(), sgi23e.Value.ToString(), sgi24e.Value.ToString(), sgi25e.Value.ToString(), sgi26e.Value.ToString(), sgi27e.Value.ToString(), sgi28e.Value.ToString(), sgi29e.Value.ToString(), sgi30e.Value.ToString() };
             File.Delete(DB);
-           // System.IO.File.AppendAllLines(DB, lines);
+            // System.IO.File.AppendAllLines(DB, lines);
             Doit();
-           
+
 
 
 
@@ -412,7 +553,6 @@ namespace Metanet_CSV_Builder
 
             }
             String[] str = uidoe.ToArray();
-            CreateCSV("1", gi1bz.Text, (Convert.ToInt32(gi1e.Value) - Convert.ToInt32(gi1s.Value) + 1), gi1s.Value.ToString(), gi1e.Value.ToString(), "", "");
             File.Copy(temppath2, CSVTemp + "temp1.oix", true);
 
             for (int i = 1; i < ocount; i++)
@@ -461,7 +601,8 @@ namespace Metanet_CSV_Builder
         }
 
 
-         async  Task OK() {
+        async Task OK()
+        {
             Thread.Sleep(2000);
             ok.Visibility = Visibility.Visible;
             Thread.Sleep(2000);
@@ -473,6 +614,6 @@ namespace Metanet_CSV_Builder
 
         }
 
-        
+
     }
 }
