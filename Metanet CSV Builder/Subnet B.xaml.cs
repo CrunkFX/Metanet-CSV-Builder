@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Metanet_CSV_Builder
 {
@@ -143,7 +144,7 @@ namespace Metanet_CSV_Builder
 
             if ((FindName($"gi{GICount}bz") as TextBox).Text.Length >= 1)
             {
-                GICount = SPCount.Children.Count + 1;
+                GICount = GICount + 1;
                 InitCounter();
                 InitLastChange();
                 InitBezeichner();
@@ -153,7 +154,23 @@ namespace Metanet_CSV_Builder
                 InitSGIStart();
                 InitSGIEnd();
             }
-            else { };
+            else {
+                UTS();
+            };
+        }
+        private async Task UTS()
+        {
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.Crimson;
+            await Task.Delay(200);
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.White;
+            await Task.Delay(100);
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.Crimson;
+                await Task.Delay(200);
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.White;
+                await Task.Delay(100);
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.Crimson;
+            await Task.Delay(200);
+            (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.White;
         }
 
         void InitCounter()
@@ -293,14 +310,14 @@ namespace Metanet_CSV_Builder
         { 
             if (SPCount.Children.Count > 1)
             {
-                SPCount.Children.Remove((UIElement)this.FindName("bar5")); 
-                SPCSV.Children.Remove((UIElement)this.FindName("bar5")); 
-               /* SPBezeichner.Children.RemoveAt(SPCount.Children.Count);
+                SPCount.Children.RemoveAt(SPCount.Children.Count - 1);
+                SPCSV.Children.RemoveAt(SPCount.Children.Count);
+                SPBezeichner.Children.RemoveAt(SPCount.Children.Count);
                 SPLastChange.Children.RemoveAt(SPCount.Children.Count);
                 SPMGE.Children.RemoveAt(SPCount.Children.Count);
                 SPMGS.Children.RemoveAt(SPCount.Children.Count);
                 SPSGE.Children.RemoveAt(SPCount.Children.Count);
-                SPSGS.Children.RemoveAt(SPCount.Children.Count);*/
+                SPSGS.Children.RemoveAt(SPCount.Children.Count);
                 GICount = GICount - 1;
             }
         }
