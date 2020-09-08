@@ -15,12 +15,12 @@
                     <RowDefinition Height="1055*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="77*"/>
-                    <ColumnDefinition Width="122*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
                     <ColumnDefinition Width="0*"/>
                 </Grid.ColumnDefinitions>
 
-                <ScrollViewer Margin="0,20,0.4,-0.2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <ScrollViewer Margin="0,20,0.2,-0.2" Grid.RowSpan="2">
 
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="65.6" Margin="0,0,0,0" Orientation="Horizontal">
                         <StackPanel x:Name="SPCount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
@@ -57,12 +57,12 @@
 
                 </ScrollViewer>
 
-                <Label x:Name="lbl1" Content="Nr.      Neue CSV                         Änderungsdatum                                       Bezeichner                            Von MelGrp.           Bis MelGrp.            Von SteuGrp.          Bis SteuGrp." HorizontalAlignment="Left" VerticalAlignment="Top" Width="985" Height="26" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                <Button x:Name="createbt" Content="Konfiguration erzeugen" HorizontalAlignment="Left" Margin="422,-37,0,0" VerticalAlignment="Top" Width="148" Click="createbt_Click" Height="27" Grid.Column="1"/>
-                <Button x:Name="savedb" Content="Änderungen speichern" HorizontalAlignment="Left" Margin="269,-37,0,0" VerticalAlignment="Top" Width="148" Click="savedb_Click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
-                <Label x:Name="ok" Content="✓" HorizontalAlignment="Left" Margin="232.2,-61,0,0" VerticalAlignment="Top" Width="67" Height="75" Background="{x:Null}" Foreground="#FF009300" FontWeight="Bold" FontSize="48" Panel.ZIndex="20" Grid.Column="1"/>
-                <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="302,-37,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10" Grid.ColumnSpan="2"/>
-                <Button x:Name="RemoveFromGI" Content="Entfernen" HorizontalAlignment="Left" Margin="35,-37,0,0" VerticalAlignment="Top" Width="87" Click="RemoveFromGI_click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
+                <Label x:Name="lbl1" Content="Nr.      Neue CSV                         Änderungsdatum                                       Bezeichner                            Von MelGrp.           Bis MelGrp.            Von SteuGrp.          Bis SteuGrp." HorizontalAlignment="Left" VerticalAlignment="Top" Width="985" Height="26" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="0,0,-53.8,0"/>
+                <Button x:Name="createbt" Content="Konfiguration erzeugen" HorizontalAlignment="Left" Margin="783,-37,0,0" VerticalAlignment="Top" Width="148" Click="createbt_Click" Height="27"/>
+                <Button x:Name="savedb" Content="Änderungen speichern" HorizontalAlignment="Left" Margin="630,-37,0,0" VerticalAlignment="Top" Width="148" Click="savedb_Click" Height="27" Panel.ZIndex="10"/>
+                <Label x:Name="ok" Content="✓" Margin="580,-61,284.2,0" VerticalAlignment="Top" Height="75" Background="{x:Null}" Foreground="#FF009300" FontWeight="Bold" FontSize="48" Panel.ZIndex="20"/>
+                <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="302,-37,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10"/>
+                <Button x:Name="RemoveFromGI" Content="Entfernen" HorizontalAlignment="Left" Margin="394,-37,0,0" VerticalAlignment="Top" Width="87" Click="RemoveFromGI_click" Height="27" Panel.ZIndex="10"/>
             </Grid>
         </TabItem>
     </TabControl>
