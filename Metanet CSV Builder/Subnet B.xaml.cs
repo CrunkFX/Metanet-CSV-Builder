@@ -62,84 +62,17 @@ namespace Metanet_CSV_Builder
 
             }
 
-            /* for (int i = 1; i < 31; i++)
-             {
-                 (FindName("gi" + i + "lc") as Label).Content = File.GetLastWriteTime(CSVPath + "Zentrale " + i + ".csv").ToString();
-                 (FindName("gi" + i + "lc") as Label).Height = 27;
-             }
+            for (int i = 0; i < GICount; i++)
+            {
+                string line = File.ReadLines(SysDB).Skip(i + 4).Take(1).First();
+                List<string> List1 = line.Split(',').ToList();
+                (FindName($"gi{i + 1}bz") as TextBox).Text = List1[0];
+                (FindName($"gi{i + 1}s") as NumericUpDown).Value = Convert.ToInt32(List1[1]);
+                (FindName($"gi{i + 1}e") as NumericUpDown).Value = Convert.ToInt32(List1[2]);
+                (FindName($"sgi{i + 1}s") as NumericUpDown).Value = Convert.ToInt32(List1[3]);
+                (FindName($"sgi{i + 1}e") as NumericUpDown).Value = Convert.ToInt32(List1[4]);
+            }
 
-             string[] result = File.ReadAllLines(DB);
-             // try
-             // {
-             Parallel.For(0, result.Length, i =>
-             {
-                 if (string.IsNullOrWhiteSpace(result[i]))
-                 {
-                     result[i] = null;
-                 }
-             });
-             for (int i = 0; i < 30; i++)
-             {
-                 (FindName("gi" + (i + 1) + "bz") as TextBox).Text = result[i];
-                 (FindName("gi" + (i + 1) + "bz") as TextBox).Height = 27;
-                 (FindName("gi" + (i + 1) + "bz") as TextBox).Visibility = Visibility.Hidden;
-             }
-             for (int i = 0; i < 30; i++)
-             {
-                 (FindName("gi" + (i + 1) + "s") as NumericUpDown).Value = Convert.ToInt16(result[(i + 30)]);
-                 (FindName("gi" + (i + 1) + "s") as NumericUpDown).Height = 27;
-                 (FindName("gi" + (i + 1) + "s") as NumericUpDown).Visibility = Visibility.Hidden;
-             }
-             for (int i = 0; i < 30; i++)
-             {
-                 (FindName("gi" + (i + 1) + "e") as NumericUpDown).Value = Convert.ToInt16(result[i + 60]);
-                 (FindName("gi" + (i + 1) + "e") as NumericUpDown).Height = 27;
-                 (FindName("gi" + (i + 1) + "e") as NumericUpDown).Visibility = Visibility.Hidden;
-             }
-             for (int i = 0; i < 30; i++)
-             {
-                 (FindName("sgi" + (i + 1) + "s") as NumericUpDown).Value = Convert.ToInt16(result[(i + 90)]);
-                 (FindName("sgi" + (i + 1) + "s") as NumericUpDown).Height = 27;
-                 (FindName("sgi" + (i + 1) + "s") as NumericUpDown).Visibility = Visibility.Hidden;
-             }
-             for (int i = 0; i < 30; i++)
-             {
-                 (FindName("sgi" + (i + 1) + "e") as NumericUpDown).Value = Convert.ToInt16(result[i + 120]);
-                 (FindName("sgi" + (i + 1) + "e") as NumericUpDown).Height = 27;
-                 (FindName("sgi" + (i + 1) + "e") as NumericUpDown).Visibility = Visibility.Hidden;
-             }
-             for (int i = 0; i < 30; i++)
-             {
-
-                 (FindName("gi" + (i + 1) + "load") as Button).Height = 27;
-                 (FindName("gi" + (i + 1) + "load") as Button).Visibility = Visibility.Hidden;
-             }
-
-             for (int i = 1; i < 30; i++)
-             {
-
-                 if ((FindName("gi" + (i) + "bz") as TextBox).Text.Length > 0)
-                 {
-
-
-                     (FindName("gi" + (i + 1) + "load") as Button).Visibility = Visibility.Visible;
-                     (FindName("gi" + (i + 1) + "lc") as Label).Visibility = Visibility.Visible;
-                     (FindName("gi" + (i + 1) + "bz") as TextBox).Visibility = Visibility.Visible;
-                     (FindName("gi" + (i + 1) + "s") as NumericUpDown).Visibility = Visibility.Visible;
-                     (FindName("gi" + (i + 1) + "e") as NumericUpDown).Visibility = Visibility.Visible;
-                     (FindName("sgi" + (i + 1) + "s") as NumericUpDown).Visibility = Visibility.Visible;
-                     (FindName("sgi" + (i + 1) + "e") as NumericUpDown).Visibility = Visibility.Visible;
-                 }
-             }
-             gi1load.Visibility = Visibility.Visible;
-             gi1lc.Visibility = Visibility.Visible;
-             gi1bz.Visibility = Visibility.Visible;
-             gi1s.Visibility = Visibility.Visible;
-             gi1e.Visibility = Visibility.Visible;
-             sgi1s.Visibility = Visibility.Visible;
-             sgi1e.Visibility = Visibility.Visible;
-
-     */
         }
 
 
@@ -178,10 +111,15 @@ namespace Metanet_CSV_Builder
             (FindName($"gi{GICount}bz") as TextBox).Background = Brushes.White;
         }
 
+
+        // INIT START--------------
+
         private void InitCounter()
         {
             SPCount.Children.Add(new Label() { Content = GICount.ToString(), Margin = new Thickness(0, 0, 0, 10), FontWeight = FontWeights.Bold, Height = 27 });
         }
+
+
 
         private void InitCSV()
         {
@@ -196,6 +134,8 @@ namespace Metanet_CSV_Builder
             loadCSV.Click += LoadCSV;
             SPCSV.Children.Add(loadCSV);
         }
+
+
 
         private void InitLastChange()
 
@@ -224,6 +164,8 @@ namespace Metanet_CSV_Builder
             SPLastChange.Children.Add(lastchange);
         }
 
+
+
         private void InitBezeichner()
         {
             TextBox bezeichner = new TextBox
@@ -237,6 +179,8 @@ namespace Metanet_CSV_Builder
             RegisterNewTextBox($"gi{GICount}bz", bezeichner);
             SPBezeichner.Children.Add(bezeichner);
         }
+
+
 
         private void InitMGIStart()
         {
@@ -257,11 +201,13 @@ namespace Metanet_CSV_Builder
             SPMGS.Children.Add(numgistart);
         }
 
+
+
         private void InitMGIEnd()
         {
             NumericUpDown numgiend = new NumericUpDown
             {
-                Name = $"gi{GICount}s",
+                Name = $"gi{GICount}e",
                 Margin = new Thickness(0, 0, 0, 10),
                 FontWeight = FontWeights.Bold,
                 Height = 27,
@@ -272,15 +218,17 @@ namespace Metanet_CSV_Builder
                 HideUpDownButtons = true,
                 Value = 0
             };
-            RegisterNumBlock($"gi{GICount}s", numgiend);
+            RegisterNumBlock($"gi{GICount}e", numgiend);
             SPMGE.Children.Add(numgiend);
         }
+
+
 
         private void InitSGIStart()
         {
             NumericUpDown numsgistart = new NumericUpDown
             {
-                Name = $"gi{GICount}s",
+                Name = $"sgi{GICount}s",
                 Margin = new Thickness(0, 0, 0, 10),
                 FontWeight = FontWeights.Bold,
                 Height = 27,
@@ -291,15 +239,17 @@ namespace Metanet_CSV_Builder
                 HideUpDownButtons = true,
                 Value = 0
             };
-            RegisterNumBlock($"gi{GICount}s", numsgistart);
+            RegisterNumBlock($"sgi{GICount}s", numsgistart);
             SPSGS.Children.Add(numsgistart);
         }
+
+
 
         private void InitSGIEnd()
         {
             NumericUpDown numsgiend = new NumericUpDown
             {
-                Name = $"gi{GICount}s",
+                Name = $"sgi{GICount}e",
                 Margin = new Thickness(0, 0, 0, 10),
                 FontWeight = FontWeights.Bold,
                 Height = 27,
@@ -310,10 +260,16 @@ namespace Metanet_CSV_Builder
                 HideUpDownButtons = true,
                 Value = 0
             };
-            RegisterNumBlock($"gi{GICount}s", numsgiend);
+            RegisterNumBlock($"sgi{GICount}e", numsgiend);
             SPSGE.Children.Add(numsgiend);
         }
 
+        // INIT END ------------------------------
+
+
+
+
+        // REGISTER USERCONTROL-ELEMENTS ---------
 
         private void RegisterTextBlock(string textBlockName, TextBlock textBlock)
         {
@@ -344,6 +300,8 @@ namespace Metanet_CSV_Builder
 
             RegisterName(textboxname, textbox);
         }
+        // REGISTER USERCONTROL-ELEMENTS END------
+
 
 
         private void RemoveFromGI_click(object sender, RoutedEventArgs e)
@@ -474,33 +432,40 @@ namespace Metanet_CSV_Builder
             await Task.Delay(2000);
             ok.Visibility = Visibility.Hidden;
         }
-
-
-        private void savedb_Click(object sender, RoutedEventArgs e)
+        private void SaveConfig()
         {
             ok.Visibility = Visibility.Visible;
-            string line = string.Empty;
-
-            string tempdb = System.IO.Path.GetTempFileName();
-            string[] lines = {GICount.ToString(),  };
             File.Delete(SysDB);
-            System.IO.File.AppendAllLines(SysDB, lines);
+            File.AppendAllText(SysDB, GICount.ToString());
+            File.AppendAllText(SysDB, "\n");
+            File.AppendAllText(SysDB, "\n");
+            File.AppendAllText(SysDB, "\n");
+            File.AppendAllText(SysDB, "\n");
+            for (int i = 0; i < GICount; i++)
+            {
+                File.AppendAllText(SysDB, (FindName($"gi{i + 1}bz") as TextBox).Text + "," + (FindName($"gi{i + 1}s") as NumericUpDown).Value.ToString() + "," + (FindName($"gi{i + 1}e") as NumericUpDown).Value.ToString() + "," + (FindName($"sgi{i + 1}s") as NumericUpDown).Value.ToString() + "," + (FindName($"sgi{i + 1}e") as NumericUpDown).Value.ToString() + "\n");
+            }
             Doit();
-
-
-
 
         }
 
-        private readonly string temppath2 = System.IO.Path.GetTempFileName();
-        public void CreateCSV(string csvno, string Zentralenadresse, int Repeat, string GAStart, string GAEnd, string SGAStart, string SGAEnd)
+        private void savedb_Click(object sender, RoutedEventArgs e)
         {
 
-            using (StreamReader reader = new StreamReader(CSVPath + "Zentrale " + csvno + ".csv"))
+
+            SaveConfig();
+
+        }
+
+        private readonly string CSVP1Temp = System.IO.Path.GetTempFileName();
+        public void CreateCSVP1(string csvno, string Zentralenadresse, int RepeatGA, string GAStart, string GAEnd, string SGAStart, string SGAEnd,int RepeatSGA)
+        {
+
+            using (StreamReader reader = new StreamReader(CSVPath + "Zentrale" + csvno + ".csv"))
             {
 
 
-                using (StreamWriter writer = new StreamWriter(temppath2))
+                using (StreamWriter writer = new StreamWriter(CSVP1Temp))
                 {
                     int counter = 0;
                     string line;
@@ -522,12 +487,7 @@ namespace Metanet_CSV_Builder
 
                             writer.WriteLine(line);
                         };
-                        if (line.Contains("Steuergruppen") == true)
-                        {
-
-
-                            writer.WriteLine(line);
-                        };
+                        
 
 
 
@@ -538,20 +498,27 @@ namespace Metanet_CSV_Builder
 
                 }
             }
-            for (int i = 0; i < Repeat; i++)
+            for (int i = 0; i < RepeatGA; i++)
             {
                 int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(temppath2, "Meldergruppe " + SGAStart + c + ";;G/" + SGAStart + c + ";" + Zentralenadresse + "." + SGAStart + c + "\r\n");
+                System.IO.File.AppendAllText(CSVP1Temp, "Meldergruppe " +  c + ";;G/" +  c + ";" + Zentralenadresse + "." +  c + "\r\n");
+
+            }
+
+            for (int i = 0; i < RepeatSGA; i++)
+            {
+                int c = i + Convert.ToInt32(SGAStart);
+                System.IO.File.AppendAllText(CSVP1Temp, "Steuergruppen " + c + ";;S/" + c + ";" + Zentralenadresse + "." + c + "\r\n");
 
             }
 
         }
 
-        private readonly string temppath3 = System.IO.Path.GetTempFileName();
-        public void CreateCSV2(string csvno, string Zentralenadresse, int Repeat, string GAStart, string GAEnd, string SGAStart, string SGAEnd, int numnn)
+        string temppath3 = System.IO.Path.GetTempFileName();
+        public void CreateCSV2(string csvno, string Zentralenadresse, int RepeatGA, string GAStart, string GAEnd, string SGAStart, string SGAEnd, int RepeatSGA)
         {
 
-            using (StreamReader reader = new StreamReader(CSVPath + "Zentrale " + csvno + ".csv"))
+            using (StreamReader reader = new StreamReader(CSVPath + "Zentrale" + csvno + ".csv"))
             {
 
 
@@ -576,14 +543,8 @@ namespace Metanet_CSV_Builder
 
 
                             writer.WriteLine(line);
-                        };
-                        if (line.Contains("Steuergruppen") == true)
-                        {
-
-
-                            writer.WriteLine(line);
-                        };
-
+                        }
+                       
 
 
 
@@ -593,13 +554,19 @@ namespace Metanet_CSV_Builder
 
                 }
             }
-            for (int i = 0; i < Repeat; i++)
+            for (int i = 0; i < RepeatGA; i++)
             {
                 int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(temppath3, "Meldergruppe " + SGAStart + c + ";;G/" + SGAStart + c + ";" + Zentralenadresse + "." + SGAStart + c + "\r\n");
+                System.IO.File.AppendAllText(temppath3, "Meldergruppe " + c + ";;G/" + c + ";" + Zentralenadresse + "." + c + "\r\n");
 
             }
-            File.Copy(temppath3, CSVTemp + "temp" + numnn + 1 + ".oix", true);
+            for (int i = 0; i < RepeatSGA; i++)
+            {
+                int c = i + Convert.ToInt32(SGAStart);
+                System.IO.File.AppendAllText(temppath3, "Steuergruppe " + c + ";;S/" + c + ";" + Zentralenadresse + "." + c + "\r\n");
+
+            }
+
 
         }
 
@@ -607,37 +574,38 @@ namespace Metanet_CSV_Builder
 
         private void createbt_Click(object sender, RoutedEventArgs e)
         {
+            SaveConfig();
 
-
-            int ocount = 1;
-            for (int i = 1; i < 30; i++)
-            {
-
-                if ((FindName("gi" + (i) + "bz") as TextBox).Text.Length > 0)
-                {
-                    ocount = ocount + 1;
-
-
-                }
-            }
             List<string> uidoe = new List<string>();
-            for (int i = 1; i < ocount; i++)
+
+
+
+            CreateCSVP1("1", (FindName("gi1bz") as TextBox).Text, (Convert.ToInt32((FindName("gi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi1s") as NumericUpDown).Value) + 1), (FindName("gi1s") as NumericUpDown).Value.ToString(), (FindName("gi1e") as NumericUpDown).Value.ToString(), (FindName("sgi1s") as NumericUpDown).Value.ToString(), (FindName("sgi1s") as NumericUpDown).Value.ToString(), (Convert.ToInt32((FindName("sgi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi1s") as NumericUpDown).Value) + 1));
+
+            File.Copy(CSVP1Temp, CSVTemp + "temp1.oix", true);
+
+
+
+
+
+            for (int i = 1; i < GICount+1; i++)
             {
-
-
-
+               
+                CreateCSV2((i).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("gi" + i + "e") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "e") as NumericUpDown).Value.ToString(), (Convert.ToInt32((FindName("sgi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi" + i + "s") as NumericUpDown).Value) + 1));
+                File.Copy(temppath3, CSVTemp + "temp" + (i + 1) + ".oix", true);
                 uidoe.Add(CSVTemp + "temp" + i + ".oix");
-
             }
-            string[] str = uidoe.ToArray();
-            File.Copy(temppath2, CSVTemp + "temp1.oix", true);
-
-            for (int i = 1; i < ocount; i++)
-            {
+            
+            
 
 
-                CreateCSV2((i + 1).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("gi" + i + "e") as NumericUpDown).Value.ToString(), "", "", i + 1);
-            }
+                
+
+         
+
+
+
+
 
             const int chunkSize = 2 * 1024; // 2KB
 
@@ -649,8 +617,8 @@ namespace Metanet_CSV_Builder
             };
             sfd.ShowDialog();
 
-            try
-            {
+            //try
+            //{
                 using (FileStream output = File.Create(sfd.FileName))
                 {
                     foreach (string file in inputFiles)
@@ -672,11 +640,11 @@ namespace Metanet_CSV_Builder
                 {
                     file.Delete();
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Du musst schon ne Datei auswählen!!!");
-            }
+            //}
+           // catch
+           // {
+            //    MessageBox.Show("Du musst schon ne Datei auswählen!!!");
+           // }
         }
 
         private async Task OK()
@@ -687,10 +655,7 @@ namespace Metanet_CSV_Builder
             ok.Visibility = Visibility.Hidden;
         }
 
-        private void gi1bz_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
 
 
     }
