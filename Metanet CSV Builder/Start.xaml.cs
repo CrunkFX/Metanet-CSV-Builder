@@ -1,7 +1,9 @@
 ﻿using MahApps.Metro.Controls;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,11 +21,31 @@ namespace Metanet_CSV_Builder
     /// <summary>
     /// Interaktionslogik für Start.xaml
     /// </summary>
+
     public partial class Start : MetroWindow
     {
+        public readonly string dbfolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Hussmann";
+        public string DevMGR = "";
+
         public Start()
         {
             InitializeComponent();
+
+            if (Directory.Exists(dbfolder))
+            {
+                dblc.Content = Directory.GetLastWriteTime(dbfolder).ToString("dd.MM.yyyy HH:mm:ss");
+                bntexport.IsEnabled = true;
+                btnbb.IsEnabled = true;
+                btnsa.IsEnabled = true;
+                btnsb.IsEnabled = true;
+                btnsc.IsEnabled = true;
+                btns2s.IsEnabled = true;
+                lbl1.Content = "Netzwerk zum Editieren auswählen!!";
+            }
+            else
+            { dblc.Content = "Keine Datenbank!!";
+                lbl1.Content = "Datenbank importieren!!";
+             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -56,7 +78,7 @@ namespace Metanet_CSV_Builder
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SubnetC win2 = new SubnetC();
+            Anlagen win2 = new Anlagen();
             win2.Show();
             Visibility = Visibility.Collapsed;
         }
@@ -86,6 +108,60 @@ namespace Metanet_CSV_Builder
             }
             System.Windows.Application.Current.Shutdown();
             base.OnClosing(e);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter="Metanet Datenbank|*.ndb";
+            try { 
+            ofd.ShowDialog();
+                if (Directory.Exists(dbfolder) && File.Exists(ofd.FileName))
+                {
+                    Directory.Delete(dbfolder, true);
+                    bntexport.IsEnabled = true;
+                    btnbb.IsEnabled = true;
+                    btnsa.IsEnabled = true;
+                    btnsb.IsEnabled = true;
+                    btnsc.IsEnabled = true;
+                    btns2s.IsEnabled = true;
+                    lbl1.Content = "Netzwerk zum Editieren auswählen!!";
+
+                }
+                
+                ZipFile.ExtractToDirectory(ofd.FileName, dbfolder + "/");
+
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Du musst schon ne Datei auswählen!");
+            }
+
+            dblc.Content = Directory.GetLastWriteTime(dbfolder).ToString("dd.MM.yyyy HH:mm:ss"); ;
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+           
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Metanet Datenbank|*.ndb";
+            sfd.ShowDialog();
+            try {
+                File.Delete(sfd.FileName);
+                ZipFile.CreateFromDirectory(dbfolder, sfd.FileName);
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Du musst schon ne Datei auswählen!");
+            }
+
+           
+
         }
     }
 }

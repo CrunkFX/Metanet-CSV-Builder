@@ -12,17 +12,17 @@
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="279*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Backbone" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_1"/>
-        <Label Content="Netzwerk zum Editieren auswählen" HorizontalAlignment="Center" Margin="25.544,10,45.8,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <Button Content="Subnet A" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_2"/>
-        <Button Content="Subnet B" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_3"/>
-        <Button Content="Subnet C" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_4"/>
-        <Button Content="SEI2Setup Starten" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_5"/>
+        <Button x:Name="btnbb" Content="Backbone" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_1" IsEnabled="False"/>
+        <Label x:Name="lbl1" Content="Netzwerk zum Editieren auswählen" HorizontalAlignment="Center" Margin="25.544,10,45.8,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="btnsa" Content="Subnet A" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_2" IsEnabled="False"/>
+        <Button x:Name="btnsb" Content="Subnet B" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_3" IsEnabled="False"/>
+        <Button x:Name="btnsc" Content="Subnet C" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_4" IsEnabled="False"/>
+        <Button x:Name="btns2s" Content="SEI2Setup Starten" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="277" Height="46" Grid.ColumnSpan="2" Click="Button_Click_5" IsEnabled="False"/>
         <GroupBox Header="Datenbank" HorizontalAlignment="Left" Height="117" Margin="0,317,-0.2,0" VerticalAlignment="Top" Width="297" Grid.ColumnSpan="2">
             <Grid Margin="0">
-                <Button Content="Import" HorizontalAlignment="Left" VerticalAlignment="Top" Width="139" Height="18"/>
-                <Button Content="Export" HorizontalAlignment="Left" Margin="154,0,0,0" VerticalAlignment="Top" Width="133" Height="18"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="154,30,58.2,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Button Content="Import" HorizontalAlignment="Left" VerticalAlignment="Top" Width="139" Height="18" Click="Button_Click_6"/>
+                <Button x:Name="bntexport" Content="Export" HorizontalAlignment="Left" Margin="154,0,0,0" VerticalAlignment="Top" Width="133" Height="18" Click="Button_Click_7" IsEnabled="False"/>
+                <Label x:Name="dblc" Content="" HorizontalAlignment="Center" Margin="115,30,0.2,0" VerticalAlignment="Top" FontWeight="Bold" Width="172"/>
                 <Label Content="Letzte Änderung:" HorizontalAlignment="Center" Margin="10,30,138.2,0" VerticalAlignment="Top" FontWeight="Bold" Width="139"/>
             </Grid>
         </GroupBox>

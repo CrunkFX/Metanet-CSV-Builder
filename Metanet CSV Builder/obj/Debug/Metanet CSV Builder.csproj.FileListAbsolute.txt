@@ -213,3 +213,5 @@ C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\D
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.csproj.CopyComplete
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.exe
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.pdb
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Anlagen.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Anlagen.baml

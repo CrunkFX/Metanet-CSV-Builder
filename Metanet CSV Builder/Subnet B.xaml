@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Metanet_CSV_Builder"
         mc:Ignorable="d"
         Title="Subnet B" Height="535.31" Width="943.333">
-    <TabControl Margin="0,0,0,0">
+    <TabControl Margin="0,0,0,0" SelectionChanged="TabControl_SelectionChanged">
         <TabItem Header="Gruppenintervalle">
             <Grid>
                 <Grid.RowDefinitions>
@@ -61,8 +61,9 @@
                 <Button x:Name="createbt" Content="Konfiguration erzeugen" HorizontalAlignment="Left" Margin="783,-37,0,0" VerticalAlignment="Top" Width="148" Click="createbt_Click" Height="27"/>
                 <Button x:Name="savedb" Content="Änderungen speichern" HorizontalAlignment="Left" Margin="630,-37,0,0" VerticalAlignment="Top" Width="148" Click="savedb_Click" Height="27" Panel.ZIndex="10"/>
                 <Label x:Name="ok" Content="✓" Margin="580,-61,284.2,0" VerticalAlignment="Top" Height="75" Background="{x:Null}" Foreground="#FF009300" FontWeight="Bold" FontSize="48" Panel.ZIndex="20"/>
-                <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="302,-37,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10"/>
-                <Button x:Name="RemoveFromGI" Content="Entfernen" HorizontalAlignment="Left" Margin="394,-37,0,0" VerticalAlignment="Top" Width="87" Click="RemoveFromGI_click" Height="27" Panel.ZIndex="10"/>
+                <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="391,-37,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10"/>
+                <Button x:Name="RemoveFromGI" Content="Entfernen" HorizontalAlignment="Left" Margin="483,-37,0,0" VerticalAlignment="Top" Width="87" Click="RemoveFromGI_click" Height="27" Panel.ZIndex="10"/>
+                <Button x:Name="AddtoGI_Copy" Content="Anlagen Verwalten" HorizontalAlignment="Left" Margin="232,-37,0,0" VerticalAlignment="Top" Width="141" Click="OpenDevMGR" Height="27" Panel.ZIndex="10"/>
             </Grid>
         </TabItem>
     </TabControl>

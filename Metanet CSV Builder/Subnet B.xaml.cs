@@ -36,6 +36,8 @@ namespace Metanet_CSV_Builder
         public SubnetB()
         {
             InitializeComponent();
+            App.Current.Properties["DevMGR"] = "Backbone";
+
 
             ok.Visibility = Visibility.Hidden;
             GICount = 1;
@@ -47,7 +49,10 @@ namespace Metanet_CSV_Builder
             InitMGIEnd();
             InitSGIStart();
             InitSGIEnd();
-
+            foreach (string file in System.IO.Directory.GetFiles(CSVPath))
+            {
+                (FindName($"cbx{GICount}") as ComboBox).Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+            }
             for (int i = 1; i < Convert.ToInt32(File.ReadLines(SysDB).Skip(0).Take(1).First()); i++)
             {
                 GICount = GICount + 1;
@@ -59,7 +64,10 @@ namespace Metanet_CSV_Builder
                 InitMGIEnd();
                 InitSGIStart();
                 InitSGIEnd();
-
+                foreach (string file in System.IO.Directory.GetFiles(CSVPath))
+                {
+                    (FindName($"cbx{GICount}") as ComboBox).Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                }
             }
 
             for (int i = 0; i < GICount; i++)
@@ -90,6 +98,10 @@ namespace Metanet_CSV_Builder
                 InitMGIEnd();
                 InitSGIStart();
                 InitSGIEnd();
+                foreach (string file in System.IO.Directory.GetFiles(CSVPath))
+                {
+                    (FindName($"cbx{GICount}") as ComboBox).Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                }
             }
             else
             {
@@ -123,6 +135,20 @@ namespace Metanet_CSV_Builder
 
         private void InitCSV()
         {
+            ComboBox cbx = new ComboBox
+            {
+                
+                Name = "Zentrale" + GICount.ToString(),
+                Margin = new Thickness(0, 0, 0, 10),
+                FontWeight = FontWeights.Bold,
+                Height = 27,
+                
+        };
+
+            cbx.SelectionChanged += LoadCSV;
+            RegisterCBX($"cbx{GICount}", cbx);
+            SPCSV.Children.Add(cbx);
+            /*
             Button loadCSV = new Button
             {
                 Content = "CSV Laden",
@@ -133,6 +159,7 @@ namespace Metanet_CSV_Builder
             };
             loadCSV.Click += LoadCSV;
             SPCSV.Children.Add(loadCSV);
+            */
         }
 
 
@@ -281,6 +308,16 @@ namespace Metanet_CSV_Builder
             RegisterName(textBlockName, textBlock);
         }
 
+        private void RegisterCBX(string textBlockName, ComboBox textBlock)
+        {
+            if ((ComboBox)FindName(textBlockName) != null)
+            {
+                UnregisterName(textBlockName);
+            }
+
+            RegisterName(textBlockName, textBlock);
+        }
+
         private void RegisterNumBlock(string numname, NumericUpDown num)
         {
             if ((NumericUpDown)FindName(numname) != null)
@@ -328,21 +365,18 @@ namespace Metanet_CSV_Builder
 
 
         // CSV Datei in Datenbankordner kopieren
-        private void LoadCSV(object sender, RoutedEventArgs e)
+        private void LoadCSV(object sender, SelectionChangedEventArgs e)
         {
-            ofd.ShowDialog();
-
-            try
-            {
-                File.Copy(ofd.FileName, CSVPath + ((Button)sender).Name + ".csv", true);
-            }
-            catch
-            {
-                MessageBox.Show("Du musst schon ne Datei auswählen!");
-            }
             for (int i = 1; i < GICount + 1; i++)
             {
                 (FindName("gi" + i + "lc") as TextBlock).Text = File.GetLastWriteTime(CSVPath + "Zentrale" + i + ".csv").ToString();
+               
+            }
+            
+            
+            for (int i = 1; i < GICount + 1; i++)
+            {
+                (FindName("gi" + i + "lc") as TextBlock).Text = File.GetLastWriteTime(CSVPath + (FindName("cbx" + i) as ComboBox).SelectedItem+".csv").ToString();
 
             }
         }
@@ -655,8 +689,19 @@ namespace Metanet_CSV_Builder
             ok.Visibility = Visibility.Hidden;
         }
 
-        
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
 
+        private void OpenDevMGR(object sender, RoutedEventArgs e)
+        {
+            Anlagen win2 = new Anlagen();
+            win2.Show();
+            
+
+            
+
+        }
     }
 }
