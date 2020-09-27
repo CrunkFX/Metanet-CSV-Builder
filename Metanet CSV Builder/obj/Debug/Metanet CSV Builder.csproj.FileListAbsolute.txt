@@ -252,3 +252,7 @@ C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\De
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetC.baml
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetA.baml
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetB.baml
+C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Debug\Metanet CSV Builder.exe.manifest
+C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Debug\Metanet CSV Builder.application
+C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.exe.manifest
+C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.application

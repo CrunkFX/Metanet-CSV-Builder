@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using ControlzEx.Theming;
+using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,9 @@ namespace Metanet_CSV_Builder
             InitializeComponent();
             Uri myUri = new Uri(CSVPath);
             wb1.Source = myUri;
-            
+            string Theme = File.ReadLines(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Hussmann/MetanetCSV/settings.xml").Skip(2).Take(1).First();
+            ThemeManager.Current.ChangeTheme(this, Theme);
+
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

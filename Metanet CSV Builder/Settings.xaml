@@ -8,8 +8,48 @@
         mc:Ignorable="d"
         Title="Einstellungen" Height="464.34" Width="303.566" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Netzwerk zum Editieren auswählen" HorizontalAlignment="Center" Margin="43,10,45.8,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Info's und Einstellungen" HorizontalAlignment="Center" Margin="43,10,45.8,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Button Content="❮" HorizontalAlignment="Left" Margin="7,13,0,0" VerticalAlignment="Top" Width="31" Height="32" FontSize="14" FontWeight="Normal" Click="Button_Click"/>
+        <Label Content="Datenbankversion:" HorizontalAlignment="Center" Margin="47,336,133.8,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Konfiguratorversion:" HorizontalAlignment="Center" Margin="48,367,120.8,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Programmversion:" HorizontalAlignment="Center" Margin="48,305,133.8,0" VerticalAlignment="Top" FontWeight="Bold" Width="115"/>
+        <Label Content="v1.0.0" HorizontalAlignment="Center" Margin="193,305,18.8,0" VerticalAlignment="Top" FontWeight="SemiBold" Width="85"/>
+        <Label Content="v1.1.1" HorizontalAlignment="Center" Margin="193,336,18.8,0" VerticalAlignment="Top" FontWeight="SemiBold" Width="85"/>
+        <Label Content="v1.0.0" HorizontalAlignment="Center" Margin="193,367,18.8,0" VerticalAlignment="Top" FontWeight="SemiBold" Width="85"/>
+        <Label Content="©2020 Mergim Mavraj" HorizontalAlignment="Center" Margin="0,406,154.8,0" VerticalAlignment="Top" FontWeight="SemiBold" Width="142"/>
+        <Label Content="Made with ❤ in Kleve" HorizontalAlignment="Center" Margin="171,406,1.8,0" VerticalAlignment="Top" FontWeight="Thin" Width="124"/>
+        <ComboBox x:Name="ThemeCBX1" HorizontalAlignment="Left" Margin="23,73,0,0" VerticalAlignment="Top" Width="119" >
+            <ComboBoxItem Content="Dark"/>
+            <ComboBoxItem Content="Light"/>
+        </ComboBox>
+        <Label x:Name="lbl1" Content="Erscheinungsbild:" HorizontalAlignment="Center" Margin="18,49,9.8,0" VerticalAlignment="Top" FontWeight="SemiBold" Width="269"/>
+        <ComboBox x:Name="ThemeCBX2" HorizontalAlignment="Left" Margin="147,73,0,0" VerticalAlignment="Top" Width="119">
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Purple"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Lime"/>
+            <ComboBoxItem Content="Emerald"/>
+            <ComboBoxItem Content="Teal"/>
+            <ComboBoxItem Content="Cyan"/>
+            <ComboBoxItem Content="Cobalt"/>
+            <ComboBoxItem Content="Indigo"/>
+            <ComboBoxItem Content="Violet"/>
+            <ComboBoxItem Content="Pink"/>
+            <ComboBoxItem Content="Magenta"/>
+            <ComboBoxItem Content="Crimson"/>
+            <ComboBoxItem Content="Amber"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Brown"/>
+            <ComboBoxItem Content="Olive"/>
+            <ComboBoxItem Content="Steel"/>
+            <ComboBoxItem Content="Mauve"/>
+            <ComboBoxItem Content="Taupe"/>
+            <ComboBoxItem Content="Sienna"/>
+            
+        </ComboBox>
+        <Button Content="Anwenden" HorizontalAlignment="Left" Margin="23,104,0,0" VerticalAlignment="Top" Width="243" Click="Button_Click_1"/>
 
     </Grid>
 </mah:MetroWindow>

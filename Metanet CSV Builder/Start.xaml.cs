@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using ControlzEx.Theming;
+using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,9 @@ namespace Metanet_CSV_Builder
 
             if (Directory.Exists(dbfolder))
             {
+                string Theme = File.ReadLines(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Hussmann/MetanetCSV/settings.xml").Skip(2).Take(1).First();
+                ThemeManager.Current.ChangeTheme(this, Theme);
+
                 dblc.Content = Directory.GetLastWriteTime(dbfolder).ToString("dd.MM.yyyy HH:mm:ss");
                 bntexport.IsEnabled = true;
                 btnbb.IsEnabled = true;
@@ -102,20 +106,30 @@ namespace Metanet_CSV_Builder
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            try
-            {
-                
-                File.Copy(path + "/#### SEI 2 Projektdatei.sei2proj", ConfigFolder + "DB/Backbone/mainconfig.xml", true);
-                File.Delete(path + "/#### Backbone Lange Bezeichner.csv");
-                File.Delete(path + "/#### Subnet A Lange Bezeichner.csv");
-                File.Delete(path + "/#### Subnet B Lange Bezeichner.csv");
-                File.Delete(path + "/#### Subnet C Lange Bezeichner.csv");
-                File.Delete(path + "/#### SEI 2 Projektdatei.sei2proj");
-            }
-            catch
-            {
-                MessageBox.Show("Err. 21  ---  Bitte die Dateien auf dem Desktop Mauell löschen!");
-            }
+            
+                if(File.Exists(path + "/#### Backbone Lange Bezeichner.csv"))
+                {
+                    File.Delete(path + "/#### Backbone Lange Bezeichner.csv");
+                }
+                if (File.Exists(path + "/#### Subnet A Lange Bezeichner.csv"))
+                {
+                    File.Delete(path + "/#### Subnet A Lange Bezeichner.csv");
+                }
+                if (File.Exists(path + "/#### Subnet B Lange Bezeichner.csv"))
+                {
+                    File.Delete(path + "/#### Subnet B Lange Bezeichner.csv");
+                }
+                if (File.Exists(path + "/#### Subnet C Lange Bezeichner.csv"))
+                {
+                    File.Delete(path + "/#### Subnet C Lange Bezeichner.csv");
+                }
+                if (File.Exists(path + "/#### SEI 2 Projektdatei.sei2projr.csv"))
+                {
+                    File.Copy(path + "/#### SEI 2 Projektdatei.sei2proj", ConfigFolder + "DB/Backbone/mainconfig.xml", true);
+                    File.Delete(path + "/#### SEI 2 Projektdatei.sei2proj");
+                }
+               
+            
             System.Windows.Application.Current.Shutdown();
             base.OnClosing(e);
         }

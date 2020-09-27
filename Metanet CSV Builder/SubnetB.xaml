@@ -6,8 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Metanet_CSV_Builder"
         mc:Ignorable="d"
-        Title="Subnet B" Height="535.31" Width="986.442">
-    <TabControl Margin="0,0,0,0" SelectionChanged="TabControl_SelectionChanged">
+        Title="Subnet B" Height="500" Width="1008" MinWidth="1008" MinHeight="300">
+    <TabControl Margin="0,0,0,0" >
         <TabItem Header="Gruppenintervalle">
             <Grid>
                 <Grid.RowDefinitions>
@@ -21,33 +21,43 @@
                     <ColumnDefinition Width="0*"/>
                 </Grid.ColumnDefinitions>
 
-                <ScrollViewer Margin="0,20,-0.2,-0.2" Grid.RowSpan="2" Grid.ColumnSpan="4">
+                <ScrollViewer Margin="0,0,-0.6,-0.2" Grid.RowSpan="2" Grid.ColumnSpan="4">
 
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="65.6" Margin="0,0,0,0" Orientation="Horizontal">
-                        <StackPanel x:Name="SPCount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+                        <StackPanel x:Name="SPCount" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,0,0">
+                            <TextBlock Text="Nr." Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
                         </StackPanel>
-                        <Label x:Name="lbl3" Content=""/>
-                        <StackPanel x:Name="SPCSV" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="65.6" Margin="10,10,0,0">
+
+                        <StackPanel x:Name="SPCSV" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="65.6" Margin="30,10,0,0">
+                            <TextBlock Text="Zentrale" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
                         </StackPanel>
-                        <StackPanel x:Name="SPLastChange" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="60,15,0,0"/>
-                        <StackPanel x:Name="SPBezeichner" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="200" Margin="30,10,0,0">
 
-
+                        <StackPanel x:Name="SPLastChange" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,10,0,0">
+                            <TextBlock Text="Letzte Änderung" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
                         </StackPanel>
-                        <StackPanel x:Name="SPMGS" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
 
-
+                        <StackPanel x:Name="SPBezeichner" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="200" Margin="20,10,0,0">
+                            <TextBlock Text="Bezeichner" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
                         </StackPanel>
-                        <StackPanel x:Name="SPMGE" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
 
-
-                        </StackPanel>
-                        <StackPanel x:Name="SPSGS" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
-
+                        <StackPanel x:Name="SPMGS" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
+                            <TextBlock Text="Von Meldegruppe" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
 
                         </StackPanel>
-                        <StackPanel x:Name="SPSGE" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
+                        <StackPanel x:Name="SPMGE" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
+                            <TextBlock Text="Bis Meldegruppe" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+
+                        </StackPanel>
+                        <StackPanel x:Name="SPSGS" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
+                            <TextBlock Text="Von Steuergruppe" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+
+
+                        </StackPanel>
+                        <StackPanel x:Name="SPSGE" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="80" Margin="20,10,0,0">
+                            <TextBlock Text="Bis Steuergruppe" Height="27" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
 
                         </StackPanel>
@@ -58,10 +68,9 @@
 
                 </ScrollViewer>
 
-                <Label x:Name="lbl1" Content="Nr.      Neue CSV                         Änderungsdatum                                       Bezeichner                            Von MelGrp.           Bis MelGrp.            Von SteuGrp.          Bis SteuGrp." HorizontalAlignment="Left" VerticalAlignment="Top" Width="985" Height="26" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="0,0,-48.2,0"/>
-                <Button x:Name="createbt" Content="Konfiguration erzeugen" HorizontalAlignment="Left" Margin="506.473,-37,0,0" VerticalAlignment="Top" Width="148" Click="createbt_Click" Height="27" Grid.Column="1"/>
-                <Button x:Name="savedb" Content="Änderungen speichern" HorizontalAlignment="Left" Margin="353.473,-37,0,0" VerticalAlignment="Top" Width="148" Click="savedb_Click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
-                <Label x:Name="ok" Content="✓" Margin="303.473,-61,283.8,0" VerticalAlignment="Top" Height="75" Background="{x:Null}" Foreground="#FF009300" FontWeight="Bold" FontSize="48" Panel.ZIndex="20" Grid.Column="1"/>
+                <Button x:Name="createbt" Content="Konfiguration erzeugen" HorizontalAlignment="Left" Margin="551.6,-37,0,0" VerticalAlignment="Top" Width="148" Click="createbt_Click" Height="27" Grid.Column="1"/>
+                <Button x:Name="savedb" Content="Änderungen speichern" HorizontalAlignment="Left" Margin="398.6,-37,0,0" VerticalAlignment="Top" Width="148" Click="savedb_Click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
+                <Label x:Name="ok" Content="✓" Margin="303.473,-61,283.8,0" VerticalAlignment="Top" Height="75" Background="{x:Null}" Foreground="#FF009300" FontWeight="Bold" FontSize="48" Panel.ZIndex="20" Grid.Column="1" Visibility="Hidden"/>
                 <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="114.473,-37,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
                 <Button x:Name="RemoveFromGI" Content="Entfernen" HorizontalAlignment="Left" Margin="206.473,-37,0,0" VerticalAlignment="Top" Width="87" Click="RemoveFromGI_click" Height="27" Panel.ZIndex="10" Grid.Column="1"/>
                 <Button x:Name="AddtoGI_Copy" Content="Anlagen Verwalten" HorizontalAlignment="Left" Margin="232,-37,0,0" VerticalAlignment="Top" Width="141" Click="OpenDevMGR" Height="27" Panel.ZIndex="10" Grid.ColumnSpan="2"/>
