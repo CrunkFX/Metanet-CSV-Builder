@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Metanet_CSV_Builder"
         mc:Ignorable="d"
-        Title="Subnet B" Height="500" Width="1008" MinWidth="1008" MinHeight="300">
+        Title="Subnet C" Height="500" Width="1008" MinWidth="1008" MinHeight="300">
     <TabControl Margin="0,0,0,0" >
         <TabItem Header="Gruppenintervalle">
             <Grid>
