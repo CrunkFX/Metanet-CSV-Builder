@@ -48,6 +48,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
@@ -68,6 +69,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Anlagen.xaml.cs">
+      <DependentUpon>Anlagen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Backbone.xaml.cs">
+      <DependentUpon>Backbone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubnetC.xaml.cs">
+      <DependentUpon>SubnetC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubnetA.xaml.cs">
+      <DependentUpon>SubnetA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl.cs" />
     <Page Include="Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,19 +90,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubnetA.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Subnet C.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Subnet B.xaml">
+    <Page Include="Anlagen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Backbone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SubnetC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SubnetA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SubnetB.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -102,18 +120,8 @@
     <Compile Include="Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SubnetA.xaml.cs">
-      <DependentUpon>SubnetA.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Subnet C.xaml.cs">
-      <DependentUpon>Subnet C.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Subnet B.xaml.cs">
-      <DependentUpon>Subnet B.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Backbone.xaml.cs">
-      <DependentUpon>Backbone.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="SubnetB.xaml.cs">
+      <DependentUpon>SubnetB.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
