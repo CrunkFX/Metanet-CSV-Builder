@@ -38,3 +38,4 @@ C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Re
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Release\Metanet CSV Builder.application
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.exe.manifest
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.application
+C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.csprojAssemblyReference.cache
