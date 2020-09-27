@@ -7,40 +7,9 @@
         xmlns:local="clr-namespace:Metanet_CSV_Builder"
         mc:Ignorable="d"
         Title="Anlagen Verwalten" Height="535.31" Width="943.333">
-    <TabControl Margin="0,0,0,0" >
-        <TabItem Header="Gruppenintervalle">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="58*"/>
-                    <RowDefinition Height="1055*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="0*"/>
-                    <ColumnDefinition Width="0*"/>
-                </Grid.ColumnDefinitions>
-
-                <ScrollViewer Margin="0,20,0.2,-0.2" Grid.RowSpan="2">
-
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="65.6" Margin="0,0,0,0" Orientation="Horizontal">
-                        <StackPanel x:Name="SPCount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
-                        </StackPanel>
-                        <Label x:Name="lbl3" Content=""/>
-                        <StackPanel x:Name="SPCSV" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="65.6" Margin="10,10,0,0">
-                        </StackPanel>
-                        <StackPanel x:Name="SPLastChange" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="60,15,0,0"/>
-                        <StackPanel x:Name="SPBezeichner" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="200" Margin="30,10,0,0">
-
-
-                        </StackPanel>
-
-
-
-                    </StackPanel>
-
-                </ScrollViewer>
-                <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="608,-32,0,0" VerticalAlignment="Top" Width="87" Click="AddToGI_click" Height="27" Panel.ZIndex="10"/>
-            </Grid>
-        </TabItem>
-    </TabControl>
+    <Grid>
+        <Button x:Name="AddtoGI" Content="Hinzufügen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="LoadCSV" Height="27" Panel.ZIndex="10" IsEnabled="False"/>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="14" Margin="102,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="tb1_TextChanged"/>
+        <WebBrowser x:Name="wb1" Margin="0,42,0.2,0"/>
+    </Grid>
 </mah:MetroWindow>

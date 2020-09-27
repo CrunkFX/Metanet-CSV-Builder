@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace Metanet_CSV_Builder
     public partial class Start : MetroWindow
     {
         public readonly string dbfolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Hussmann";
+        private readonly string ConfigFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Hussmann/MetanetCSV/";
         public string DevMGR = "";
 
         public Start()
@@ -78,7 +80,7 @@ namespace Metanet_CSV_Builder
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Anlagen win2 = new Anlagen();
+            SubnetC win2 = new SubnetC();
             win2.Show();
             Visibility = Visibility.Collapsed;
         }
@@ -86,10 +88,15 @@ namespace Metanet_CSV_Builder
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            File.Copy("bin/opt/SubnetA/current.csv",path+"/.SUBNET-A Lange Bezeichner.csv",true);
-            File.Copy("bin/opt/SubnetB/current.csv", path + "/.SUBNET-B Lange Bezeichner.csv", true);
-            File.Copy("bin/opt/SubnetC/current.csv", path + "/.SUBNET-C Lange Bezeichner.csv", true);
-            File.Copy("bin/opt/Backbone/current.csv", path + "/.Backbone Lange Bezeichner.csv", true);
+            File.Copy(ConfigFolder+"Temp/Backbone/intervals.xml",path+"/#### Backbone Lange Bezeichner.csv",true);
+            File.Copy(ConfigFolder + "Temp/SubnetA/intervals.xml", path + "/#### Subnet A Lange Bezeichner.csv", true);
+
+            File.Copy(ConfigFolder + "Temp/SubnetB/intervals.xml", path + "/#### Subnet B Lange Bezeichner.csv", true);
+            File.Copy(ConfigFolder + "Temp/SubnetC/intervals.xml", path + "/#### Subnet C Lange Bezeichner.csv", true);
+
+            File.Copy(ConfigFolder + "DB/Backbone/mainconfig.xml", path + "/#### SEI 2 Projektdatei.sei2proj", true);
+
+            Process.Start("config.exe");
             //Visibility = Visibility.Collapsed;
         }
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
@@ -97,10 +104,13 @@ namespace Metanet_CSV_Builder
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             try
             {
-                File.Delete(path + "/.SUBNET-A Lange Bezeichner.csv");
-                File.Delete(path + "/.SUBNET-B Lange Bezeichner.csv");
-                File.Delete(path + "/.SUBNET-C Lange Bezeichner.csv");
-                File.Delete(path + "/.Backbone Lange Bezeichner.csv");
+                
+                File.Copy(path + "/#### SEI 2 Projektdatei.sei2proj", ConfigFolder + "DB/Backbone/mainconfig.xml", true);
+                File.Delete(path + "/#### Backbone Lange Bezeichner.csv");
+                File.Delete(path + "/#### Subnet A Lange Bezeichner.csv");
+                File.Delete(path + "/#### Subnet B Lange Bezeichner.csv");
+                File.Delete(path + "/#### Subnet C Lange Bezeichner.csv");
+                File.Delete(path + "/#### SEI 2 Projektdatei.sei2proj");
             }
             catch
             {
