@@ -26,7 +26,7 @@
                 <Label Content="Letzte Änderung:" HorizontalAlignment="Center" Margin="10,30,138.2,0" VerticalAlignment="Top" FontWeight="Bold" Width="139"/>
             </Grid>
         </GroupBox>
-        <Button Content="⚙" HorizontalAlignment="Left" Margin="238.544,10,0,0" VerticalAlignment="Top" Width="31" Height="32" FontSize="14" FontWeight="Normal" Click="Button_Click" Grid.Column="1"/>
+        <Button x:Name="btnset" Content="⚙" HorizontalAlignment="Left" Margin="238.544,10,0,0" VerticalAlignment="Top" Width="31" Height="32" FontSize="14" FontWeight="Normal" Click="Button_Click" Grid.Column="1" IsEnabled="False"/>
 
     </Grid>
 </mah:MetroWindow>

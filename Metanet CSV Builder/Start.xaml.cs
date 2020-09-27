@@ -46,6 +46,7 @@ namespace Metanet_CSV_Builder
                 btnsb.IsEnabled = true;
                 btnsc.IsEnabled = true;
                 btns2s.IsEnabled = true;
+                btnset.IsEnabled = true;
                 lbl1.Content = "Netzwerk zum Editieren auswählen!!";
             }
             else
@@ -149,6 +150,7 @@ namespace Metanet_CSV_Builder
                     btnsb.IsEnabled = true;
                     btnsc.IsEnabled = true;
                     btns2s.IsEnabled = true;
+                    btnset.IsEnabled = true;
                     lbl1.Content = "Netzwerk zum Editieren auswählen!!";
 
                 }
