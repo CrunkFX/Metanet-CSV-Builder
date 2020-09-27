@@ -6,6 +6,14 @@ Inkl. Datenbank für Bezeichner und Konfigurator
 
 # Changelog
 
+### 0.1.0 (2020-09-27)
+- (CrunkFX) Code Cleanup, added Comments to Snippets
+- (Xajarex) Fixed App crashing while adding on empty config
+- (Xajarex) Completed Release
+- (CrunkFX) Added Thememanager
+- (CrunkFX) Fixed DevMGR Error with Semicolons
+- (CrunkFX) Fixed DB export
+
 ### 0.0.9 (2020-09-27)
 - (CrunkFX) Completed Dynamic Creator and merged from Dev to Master
 
