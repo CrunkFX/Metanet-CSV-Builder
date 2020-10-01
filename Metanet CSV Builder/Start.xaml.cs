@@ -40,14 +40,7 @@ namespace Metanet_CSV_Builder
                 ThemeManager.Current.ChangeTheme(this, Theme);
 
                 dblc.Content = Directory.GetLastWriteTime(dbfolder).ToString("dd.MM.yyyy HH:mm:ss");
-                bntexport.IsEnabled = true;
-                btnbb.IsEnabled = true;
-                btnsa.IsEnabled = true;
-                btnsb.IsEnabled = true;
-                btnsc.IsEnabled = true;
-                btns2s.IsEnabled = true;
-                btnset.IsEnabled = true;
-                lbl1.Content = "Netzwerk zum Editieren auswählen!!";
+                dbfound();
             }
             else
             { dblc.Content = "Keine Datenbank!!";
@@ -124,7 +117,7 @@ namespace Metanet_CSV_Builder
                 {
                     File.Delete(path + "/#### Subnet C Lange Bezeichner.csv");
                 }
-                if (File.Exists(path + "/#### SEI 2 Projektdatei.sei2projr.csv"))
+                if (File.Exists(path + "/#### SEI 2 Projektdatei.sei2proj"))
                 {
                     File.Copy(path + "/#### SEI 2 Projektdatei.sei2proj", ConfigFolder + "DB/Backbone/mainconfig.xml", true);
                     File.Delete(path + "/#### SEI 2 Projektdatei.sei2proj");
@@ -144,31 +137,35 @@ namespace Metanet_CSV_Builder
                 if (Directory.Exists(dbfolder) && File.Exists(ofd.FileName))
                 {
                     Directory.Delete(dbfolder, true);
-                    bntexport.IsEnabled = true;
-                    btnbb.IsEnabled = true;
-                    btnsa.IsEnabled = true;
-                    btnsb.IsEnabled = true;
-                    btnsc.IsEnabled = true;
-                    btns2s.IsEnabled = true;
-                    btnset.IsEnabled = true;
-                    lbl1.Content = "Netzwerk zum Editieren auswählen!!";
-
+                    dbfound();
                 }
                 
+
                 ZipFile.ExtractToDirectory(ofd.FileName, dbfolder + "/");
-
-
-
-
+                if (Directory.Exists(dbfolder) && File.Exists(ofd.FileName))
+                {
+                    dbfound();
+                }
+        
             }
             catch
             {
-                MessageBox.Show("Du musst schon ne Datei auswählen!");
+                MessageBox.Show("Du musst schon ne Datei auswählen! ;)");
             }
 
             dblc.Content = Directory.GetLastWriteTime(dbfolder).ToString("dd.MM.yyyy HH:mm:ss"); ;
         }
-
+        private void dbfound()
+        {
+            bntexport.IsEnabled = true;
+            btnbb.IsEnabled = true;
+            btnsa.IsEnabled = true;
+            btnsb.IsEnabled = true;
+            btnsc.IsEnabled = true;
+            btns2s.IsEnabled = true;
+            btnset.IsEnabled = true;
+            lbl1.Content = "Netzwerk zum Editieren auswählen!!";
+        }
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
            

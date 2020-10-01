@@ -39,3 +39,16 @@ C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Re
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.exe.manifest
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.application
 C:\Users\CrunkFX\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.csprojAssemblyReference.cache
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.csprojAssemblyReference.cache
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\SubnetC.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\SubnetB.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\SubnetA.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Settings.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Start.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Anlagen.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Backbone.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\App.g.cs
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder_MarkupCompile.cache
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder_MarkupCompile.lref
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.exe
+C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Release\Metanet CSV Builder.pdb
