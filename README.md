@@ -6,6 +6,11 @@ Inkl. Datenbank für Bezeichner und Konfigurator
 
 # Changelog
 
+### 0.1.1 (2020-10-01)
+- (CrunkFX) Fixed deletion of unused Projectfiles
+- (CrunkFX) Fixed Program reload after DB import
+- (Xajarex) Fixed Windownames
+
 ### 0.1.0 (2020-09-27)
 - (CrunkFX) Code Cleanup, added Comments to Snippets
 - (Xajarex) Fixed App crashing while adding on empty config
