@@ -158,8 +158,6 @@ C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debu
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Settings.g.cs
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Start.g.cs
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetA.g.cs
-C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Subnet C.g.cs
-C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Subnet B.g.cs
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Backbone.g.cs
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\App.g.cs
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder_MarkupCompile.cache
@@ -168,8 +166,6 @@ C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debu
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Settings.baml
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Start.baml
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetA.baml
-C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Subnet C.baml
-C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Subnet B.baml
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Backbone.baml
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.g.resources
 C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet_CSV_Builder.Properties.Resources.resources
@@ -260,3 +256,13 @@ C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\D
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetB.baml
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.exe.manifest
 C:\Users\m.mavraj\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.application
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetC.g.cs
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetB.g.cs
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Anlagen.g.cs
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Debug\Metanet CSV Builder.exe.manifest
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\bin\Debug\Metanet CSV Builder.application
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetC.baml
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\SubnetB.baml
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Anlagen.baml
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.exe.manifest
+C:\Users\bmahu\Documents\GitHub\Metanet-CSV-Builder\Metanet CSV Builder\obj\Debug\Metanet CSV Builder.application

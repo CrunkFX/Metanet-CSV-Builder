@@ -456,14 +456,20 @@ namespace Metanet_CSV_Builder
             }
             for (int i = 0; i < RepeatGA; i++)
             {
-                int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(CSVP1Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (GAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(GAStart);
+                    System.IO.File.AppendAllText(CSVP1Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
 
             for (int i = 0; i < RepeatSGA; i++)
             {
-                int c = i + Convert.ToInt32(SGAStart);
-                System.IO.File.AppendAllText(CSVP1Temp, "Steuergruppen " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (SGAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(SGAStart);
+                    System.IO.File.AppendAllText(CSVP1Temp, "Steuergruppen " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
 
         }
@@ -495,13 +501,20 @@ namespace Metanet_CSV_Builder
             }
             for (int i = 0; i < RepeatGA; i++)
             {
-                int c = i + Convert.ToInt32(GAStart);
+                if (GAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(GAStart);
                 System.IO.File.AppendAllText(CSVP2Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
             for (int i = 0; i < RepeatSGA; i++)
             {
-                int c = i + Convert.ToInt32(SGAStart);
-                System.IO.File.AppendAllText(CSVP2Temp, "Steuergruppe " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if(SGAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(SGAStart);
+                    System.IO.File.AppendAllText(CSVP2Temp, "Steuergruppe " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
+                
             }
         }
         /************************************/
@@ -511,15 +524,19 @@ namespace Metanet_CSV_Builder
         private void createbt_Click(object sender, RoutedEventArgs e)
         {
             SaveConfig();
+            
             try
             {
+                
                 List<string> uidoe = new List<string>();
-                CreateCSVP1((FindName("gi1bz") as TextBox).Text, (Convert.ToInt32((FindName("gi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi1s") as NumericUpDown).Value) + 1), (FindName("gi1s") as NumericUpDown).Value.ToString(), (FindName("sgi1s") as NumericUpDown).Value.ToString(), (Convert.ToInt32((FindName("sgi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi1s") as NumericUpDown).Value) + 1));
+                CreateCSVP1((FindName("gi1bz") as TextBox).Text, (Convert.ToInt32((FindName("gi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi1s") as NumericUpDown).Value) + 1), (FindName("gi1s") as NumericUpDown).Value.ToString(), (FindName("sgi1s") as NumericUpDown).Value.ToString() , (Convert.ToInt32((FindName("sgi1e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi1s") as NumericUpDown).Value) + 1));
                 File.Copy(CSVP1Temp, CSVTemp + "temp1.oix", true);
                 uidoe.Add(CSVTemp + "temp1.oix");
                 for (int i = 2; i < GICount + 1; i++)
                 {
-                    CreateCSV2((i).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "s") as NumericUpDown).Value.ToString(), (Convert.ToInt32((FindName("sgi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi" + i + "s") as NumericUpDown).Value) + 1));
+                   
+
+                    CreateCSV2((i).ToString(), (FindName("gi" + i + "bz") as TextBox).Text, (Convert.ToInt32((FindName("gi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("gi" + i + "s") as NumericUpDown).Value) + 1), (FindName("gi" + i + "s") as NumericUpDown).Value.ToString(), (FindName("sgi" + i + "s") as NumericUpDown).Value.ToString() , (Convert.ToInt32((FindName("sgi" + i + "e") as NumericUpDown).Value) - Convert.ToInt32((FindName("sgi" + i + "s") as NumericUpDown).Value) + 1));
                     File.Copy(CSVP2Temp, CSVTemp + "temp" + (i) + ".oix", true);
                     uidoe.Add(CSVTemp + "temp" + i + ".oix");
                 }

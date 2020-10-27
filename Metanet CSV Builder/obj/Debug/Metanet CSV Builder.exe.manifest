@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metanet CSV Builder.exe" size="298480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metanet CSV Builder.exe" size="298928">
       <assemblyIdentity name="Metanet CSV Builder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BTZUCUw8Vw6oQBA9o8QSO6xoupR6XSfUcB/hU1l3CeY=</dsig:DigestValue>
+        <dsig:DigestValue>2hR/7Wiuch50OzUEm9Hjtm+rctjKTzAKgbfJC2OpZ8Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

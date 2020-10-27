@@ -456,14 +456,20 @@ namespace Metanet_CSV_Builder
             }
             for (int i = 0; i < RepeatGA; i++)
             {
-                int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(CSVP1Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (GAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(GAStart);
+                    System.IO.File.AppendAllText(CSVP1Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
 
             for (int i = 0; i < RepeatSGA; i++)
             {
-                int c = i + Convert.ToInt32(SGAStart);
-                System.IO.File.AppendAllText(CSVP1Temp, "Steuergruppen " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (SGAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(SGAStart);
+                    System.IO.File.AppendAllText(CSVP1Temp, "Steuergruppen " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
 
         }
@@ -495,13 +501,20 @@ namespace Metanet_CSV_Builder
             }
             for (int i = 0; i < RepeatGA; i++)
             {
-                int c = i + Convert.ToInt32(GAStart);
-                System.IO.File.AppendAllText(CSVP2Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (GAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(GAStart);
+                    System.IO.File.AppendAllText(CSVP2Temp, "Meldergruppe " + c + ";;G/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
             }
             for (int i = 0; i < RepeatSGA; i++)
             {
-                int c = i + Convert.ToInt32(SGAStart);
-                System.IO.File.AppendAllText(CSVP2Temp, "Steuergruppe " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                if (SGAStart != "0")
+                {
+                    int c = i + Convert.ToInt32(SGAStart);
+                    System.IO.File.AppendAllText(CSVP2Temp, "Steuergruppe " + c + ";;S/" + c + ";" + Bezeichner + "." + c + "\r\n");
+                }
+
             }
         }
         /************************************/
